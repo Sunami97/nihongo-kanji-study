@@ -68,8 +68,8 @@ export default function KanjiCard({ word, defaultOpen = false }: KanjiCardProps)
 
       <DetailWrapper isOpen={open}>
         <Detail>
-          <div><strong>요미카타:</strong> {word.yomikata}</div>
-          <div><strong>뜻:</strong> {word.meaning}</div>
+          <div><strong>{word.yomikata}</strong></div>
+          <div><strong>{word.meaning}</strong></div>
         </Detail>
       </DetailWrapper>
     </Card>
