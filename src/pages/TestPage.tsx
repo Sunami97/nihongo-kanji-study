@@ -132,17 +132,17 @@ export default function TestPage() {
       <div>
         <Input
           type="text"
-          value={userMeaning}
-          placeholder="뜻 입력"
-          onChange={(e) => setUserMeaning(e.target.value)}
+          value={userYomikata}
+          placeholder="요미카타 입력"
+          onChange={(e) => setUserYomikata(e.target.value)}
         />
       </div>
       <div>
         <Input
           type="text"
-          value={userYomikata}
-          placeholder="요미카타 입력"
-          onChange={(e) => setUserYomikata(e.target.value)}
+          value={userMeaning}
+          placeholder="뜻 입력"
+          onChange={(e) => setUserMeaning(e.target.value)}
         />
       </div>
 
