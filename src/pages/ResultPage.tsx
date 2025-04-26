@@ -69,7 +69,7 @@ export default function ResultPage() {
 
   return (
     <Container>
-      <h1>결과 페이지</h1>
+      <h1>{chapter} {year} 테스트 결과</h1>
 
       <Section>
         <Title>맞은 문제 ({correctAnswers.length})</Title>
