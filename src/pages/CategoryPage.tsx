@@ -24,7 +24,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const ChapterButton = styled.button`
-   margin: 0.5rem;
+  margin: 0.5rem;
   padding: 1rem 2rem;
   background-color: #4caf50;
   color: white;
@@ -46,7 +46,7 @@ export default function CategoryPage() {
   const chapterKeys = Object.keys(kanjiData); // 🔥 kanjiData에서 chapter 키만 추출
 
   const handleSelectChapter = (chapterId: string) => {
-    navigate(`/year-select/${chapterId}`);
+    navigate(`/sub-category/${chapterId}`);
   };
 
   const convertChapterName = (id: string) => {

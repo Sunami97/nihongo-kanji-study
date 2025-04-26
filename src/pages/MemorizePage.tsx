@@ -76,15 +76,15 @@ const BackButton = styled.button`
 `;
 
 export default function MemorizePage() {
-  const { chapter, year } = useParams<{ chapter: string; year: string }>();
+  const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   const [isAllOpen, setIsAllOpen] = useState(false);
 
-  const kanjiList: KanjiWord[] = chapter && year && kanjiData[chapter]?.[year] ? kanjiData[chapter][year] : [];
+  const kanjiList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
 
   const handleStartTest = () => {
-    if (chapter && year) {
-      navigate(`/test/${chapter}/${year}`);
+    if (chapter && subcategory) {
+      navigate(`/test/${chapter}/${subcategory}`);
     }
   };
 
@@ -94,7 +94,7 @@ export default function MemorizePage() {
 
   const handleGoBackToYearSelect = () => {
     if (chapter) {
-      navigate(`/year-select/${chapter}`);
+      navigate(`/sub-category/${chapter}`);
     }
   };
 
@@ -107,7 +107,7 @@ export default function MemorizePage() {
         </BackButton>
       </BackButtonWrapper>
 
-      <Title>{chapter} - {year}년 한자 암기</Title>
+      <Title>{chapter} - {subcategory} 한자 암기</Title>
 
       {kanjiList.length > 0 && (
         <ButtonWrapper>

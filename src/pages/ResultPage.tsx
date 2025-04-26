@@ -60,7 +60,7 @@ interface AnswerRecord {
 }
 
 export default function ResultPage() {
-  const { chapter, year } = useParams<{ chapter: string; year: string }>();
+  const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -70,18 +70,18 @@ export default function ResultPage() {
   const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
 
   const handleRetry = () => {
-    if (chapter && year) {
-      navigate(`/test/${chapter}/${year}`);
+    if (chapter && subcategory) {
+      navigate(`/test/${chapter}/${subcategory}`);
     }
   };
 
   const handleGoYearSelect = () => {
-    navigate(`/year-select/${chapter}`);
+    navigate(`/sub-category/${chapter}`);
   };
 
   return (
     <Container>
-      <h1>{chapter} {year} 테스트 결과과</h1>
+      <h1>{chapter} {subcategory} 테스트 결과</h1>
 
       <Section>
         <Title>맞은 문제 ({correctAnswers.length})</Title>

@@ -64,10 +64,10 @@ const BackButton = styled.button`
 `;
 
 export default function TestPage() {
-  const { chapter, year } = useParams<{ chapter: string; year: string }>();
+  const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   
-  const wordList: KanjiWord[] = chapter && year && kanjiData[chapter]?.[year] ? kanjiData[chapter][year] : [];
+  const wordList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userMeaning, setUserMeaning] = useState('');
@@ -100,7 +100,7 @@ export default function TestPage() {
       setUserMeaning('');
       setUserYomikata('');
     } else {
-      navigate(`/result/${chapter}/${year}`, {
+      navigate(`/result/${chapter}/${subcategory}`, {
         state: { answers: newAnswers }
       });
     }
@@ -115,8 +115,8 @@ export default function TestPage() {
   };
 
   const handleGoBackToMemorize = () => {
-    if (chapter && year) {
-      navigate(`/memorize/${chapter}/${year}`);
+    if (chapter && subcategory) {
+      navigate(`/memorize/${chapter}/${subcategory}`);
     }
   };
 
@@ -126,7 +126,7 @@ export default function TestPage() {
 
   return (
     <Container>
-      <h1>{chapter} {year} 테스트</h1>
+      <h1>{chapter} {subcategory} 테스트</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
 
       <div>
