@@ -66,35 +66,39 @@ const BackButton = styled.button`
 export default function TestPage() {
   const { chapter, year } = useParams<{ chapter: string; year: string }>();
   const navigate = useNavigate();
-
+  
   const wordList: KanjiWord[] = chapter && year && kanjiData[chapter]?.[year] ? kanjiData[chapter][year] : [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userMeaning, setUserMeaning] = useState('');
+  const [userYomikata, setUserYomikata] = useState('');
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
 
   const currentWord = wordList[currentIndex];
 
   const handleCheckAnswer = () => {
     const correctMeanings = currentWord.meaning.split(',').map((item) => item.trim());
-    const userAnswer = userMeaning.trim();
-  
-    const meaningCorrect = correctMeanings.includes(userAnswer); 
-  
+    const meaningCorrect = correctMeanings.includes(userMeaning.trim());
+    const yomikataCorrect = userYomikata.trim() === currentWord.yomikata.trim();
+
+    const isCorrect = meaningCorrect && yomikataCorrect; // 🔥 둘 다 맞아야 true
+
     const newRecord: AnswerRecord = {
       kanji: currentWord.kanji,
       yomikata: currentWord.yomikata,
       correctMeaning: currentWord.meaning,
-      userMeaning: userAnswer,
-      isCorrect: meaningCorrect,
+      userMeaning: userMeaning.trim(),
+      userYomikata: userYomikata.trim(),
+      isCorrect,
     };
-  
+
     const newAnswers = [...answers, newRecord];
-  
+
     if (currentIndex + 1 < wordList.length) {
       setAnswers(newAnswers);
       setCurrentIndex(prev => prev + 1);
       setUserMeaning('');
+      setUserYomikata('');
     } else {
       navigate(`/result/${chapter}/${year}`, {
         state: { answers: newAnswers }
@@ -106,6 +110,7 @@ export default function TestPage() {
     if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1);
       setUserMeaning('');
+      setUserYomikata('');
     }
   };
 
@@ -121,7 +126,7 @@ export default function TestPage() {
 
   return (
     <Container>
-      <h1>{chapter} {year} 테스트</h1>
+      <h1>테스트 모드</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
 
       <div>
@@ -130,6 +135,14 @@ export default function TestPage() {
           value={userMeaning}
           placeholder="뜻 입력"
           onChange={(e) => setUserMeaning(e.target.value)}
+        />
+      </div>
+      <div>
+        <Input
+          type="text"
+          value={userYomikata}
+          placeholder="요미카타 입력"
+          onChange={(e) => setUserYomikata(e.target.value)}
         />
       </div>
 

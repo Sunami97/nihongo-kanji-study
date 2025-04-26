@@ -3,5 +3,6 @@ export interface AnswerRecord {
   yomikata: string;
   correctMeaning: string;
   userMeaning: string;
+  userYomikata: string;
   isCorrect: boolean;
 }

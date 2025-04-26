@@ -1,6 +1,5 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { AnswerRecord } from '@/types/kanji.types';
 
 const Container = styled.div`
   padding: 2rem;
@@ -22,8 +21,12 @@ const List = styled.ul`
 `;
 
 const Item = styled.li<{ isCorrect: boolean }>`
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
   color: ${(props) => (props.isCorrect ? '#4caf50' : '#f44336')};
+  border-bottom: 1px solid #ddd; /* 🔥 구분선 추가 */
+  text-align: center;
+  word-break: keep-all;
 `;
 
 const ButtonWrapper = styled.div`
@@ -47,6 +50,15 @@ const Button = styled.button`
   }
 `;
 
+interface AnswerRecord {
+  kanji: string;
+  yomikata: string;
+  correctMeaning: string;
+  userMeaning: string;
+  userYomikata: string;
+  isCorrect: boolean;
+}
+
 export default function ResultPage() {
   const { chapter, year } = useParams<{ chapter: string; year: string }>();
   const navigate = useNavigate();
@@ -63,13 +75,13 @@ export default function ResultPage() {
     }
   };
 
-  const handleGoHome = () => {
-    navigate('/');
+  const handleGoYearSelect = () => {
+    navigate(`/year-select/${chapter}`);
   };
 
   return (
     <Container>
-      <h1>{chapter} {year} 테스트 결과</h1>
+      <h1>결과 페이지</h1>
 
       <Section>
         <Title>맞은 문제 ({correctAnswers.length})</Title>
@@ -87,8 +99,9 @@ export default function ResultPage() {
         <List>
           {wrongAnswers.map((answer, idx) => (
             <Item key={idx} isCorrect={false}>
-              {answer.kanji} ({answer.yomikata}) -
-              내 답: {answer.userMeaning} / 정답: {answer.correctMeaning}
+              {answer.kanji}<br />
+              정답 - {answer.correctMeaning} / {answer.yomikata}<br />
+              내 답 - {answer.userMeaning} / {answer.userYomikata}<br />
             </Item>
           ))}
         </List>
@@ -96,7 +109,7 @@ export default function ResultPage() {
 
       <ButtonWrapper>
         <Button onClick={handleRetry}>다시 풀기</Button>
-        <Button onClick={handleGoHome}>홈으로</Button>
+        <Button onClick={handleGoYearSelect}>홈으로 가기</Button>
       </ButtonWrapper>
     </Container>
   );
