@@ -49,6 +49,20 @@ const Button = styled.button`
   }
 `;
 
+const BackButton = styled.button`
+  padding: 0.8rem 2rem;
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #757575;
+  }
+`;
+
 export default function TestPage() {
   const { chapter, year } = useParams<{ chapter: string; year: string }>();
   const navigate = useNavigate();
@@ -62,18 +76,21 @@ export default function TestPage() {
   const currentWord = wordList[currentIndex];
 
   const handleCheckAnswer = () => {
-    const meaningCorrect = userMeaning.trim() === currentWord.meaning.trim();
-
+    const correctMeanings = currentWord.meaning.split(',').map((item) => item.trim());
+    const userAnswer = userMeaning.trim();
+  
+    const meaningCorrect = correctMeanings.includes(userAnswer); 
+  
     const newRecord: AnswerRecord = {
       kanji: currentWord.kanji,
       yomikata: currentWord.yomikata,
       correctMeaning: currentWord.meaning,
-      userMeaning: userMeaning.trim(),
+      userMeaning: userAnswer,
       isCorrect: meaningCorrect,
     };
-
+  
     const newAnswers = [...answers, newRecord];
-
+  
     if (currentIndex + 1 < wordList.length) {
       setAnswers(newAnswers);
       setCurrentIndex(prev => prev + 1);
@@ -126,9 +143,9 @@ export default function TestPage() {
       </ButtonRow>
 
       <SingleButtonRow>
-        <Button onClick={handleGoBackToMemorize}>
+        <BackButton onClick={handleGoBackToMemorize}>
           돌아가기
-        </Button>
+        </BackButton>
       </SingleButtonRow>
 
       <p>{currentIndex + 1} / {wordList.length} 문제</p>
