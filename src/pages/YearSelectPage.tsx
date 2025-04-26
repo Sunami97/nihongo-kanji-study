@@ -57,7 +57,7 @@ export default function YearSelectPage() {
     <Container>
       <BackButtonWrapper>
         <BackButton onClick={handleGoBackToCategory}>
-          돌아가기기
+          돌아가기
         </BackButton>
       </BackButtonWrapper>
 
