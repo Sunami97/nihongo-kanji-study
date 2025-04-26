@@ -126,7 +126,7 @@ export default function TestPage() {
 
   return (
     <Container>
-      <h1>테스트 모드</h1>
+      <h1>{chapter} {year} 테스트</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
 
       <div>
