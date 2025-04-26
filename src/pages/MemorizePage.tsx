@@ -22,6 +22,7 @@ const Title = styled.h1`
 const ButtonWrapper = styled.div`
   margin-bottom: 3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 `;
