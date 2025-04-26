@@ -2,18 +2,34 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 `;
 
+const Title = styled.h1`
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3rem;
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+`;
+
 const ChapterButton = styled.button`
-  margin: 1rem;
+   margin: 0.5rem;
   padding: 1rem 2rem;
   background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -23,27 +39,23 @@ const ChapterButton = styled.button`
   }
 `;
 
-const chapters = [
-  { id: 'chapter1', name: '1장' },
-  { id: 'chapter2', name: '2장' },
-  { id: 'chapter3', name: '3장' },
-  { id: 'chapter4', name: '4장' },
-];
-
 export default function CategoryPage() {
   const navigate = useNavigate();
 
+  const handleSelectChapter = (chapter: string) => {
+    navigate(`/year-select/${chapter}`);
+  };
+
   return (
     <Container>
-      <h1>장 선택</h1>
-      {chapters.map((chapter) => (
-        <ChapterButton
-          key={chapter.id}
-          onClick={() => navigate(`/year-select/${chapter.id}`)}
-        >
-          {chapter.name}
-        </ChapterButton>
-      ))}
+      <Title>일본어 단어 암기</Title>
+
+      <ButtonWrapper>
+        <ChapterButton onClick={() => handleSelectChapter('chapter1')}>1장</ChapterButton>
+        <ChapterButton onClick={() => handleSelectChapter('chapter2')}>2장</ChapterButton>
+        <ChapterButton onClick={() => handleSelectChapter('chapter3')}>3장</ChapterButton>
+        <ChapterButton onClick={() => handleSelectChapter('chapter4')}>4장</ChapterButton>
+      </ButtonWrapper>
     </Container>
   );
 }

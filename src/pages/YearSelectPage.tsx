@@ -9,7 +9,7 @@ const Container = styled.div`
 const YearButton = styled.button`
   margin: 0.5rem;
   padding: 1rem 2rem;
-  background-color: #2196f3;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 8px;
@@ -19,7 +19,7 @@ const YearButton = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #1976d2;
+    background-color: #45a049;
   }
 `;
 
