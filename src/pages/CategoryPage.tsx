@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { kanjiData } from '@/data/kanjiData'; 
 
 const Container = styled.div`
   padding: 4rem 2rem;
@@ -42,8 +43,15 @@ const ChapterButton = styled.button`
 export default function CategoryPage() {
   const navigate = useNavigate();
 
-  const handleSelectChapter = (chapter: string) => {
-    navigate(`/year-select/${chapter}`);
+  const chapterKeys = Object.keys(kanjiData); // 🔥 kanjiData에서 chapter 키만 추출
+
+  const handleSelectChapter = (chapterId: string) => {
+    navigate(`/year-select/${chapterId}`);
+  };
+
+  const convertChapterName = (id: string) => {
+    const number = id.replace('chapter', '');
+    return `${number}장`;
   };
 
   return (
@@ -51,10 +59,14 @@ export default function CategoryPage() {
       <Title>일본어 단어 암기</Title>
 
       <ButtonWrapper>
-        <ChapterButton onClick={() => handleSelectChapter('chapter1')}>1장</ChapterButton>
-        <ChapterButton onClick={() => handleSelectChapter('chapter2')}>2장</ChapterButton>
-        <ChapterButton onClick={() => handleSelectChapter('chapter3')}>3장</ChapterButton>
-        <ChapterButton onClick={() => handleSelectChapter('chapter4')}>4장</ChapterButton>
+        {chapterKeys.map((id) => (
+          <ChapterButton
+            key={id}
+            onClick={() => handleSelectChapter(id)}
+          >
+            {convertChapterName(id)}
+          </ChapterButton>
+        ))}
       </ButtonWrapper>
     </Container>
   );
