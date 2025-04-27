@@ -10,6 +10,7 @@ const Container = styled.div`
 
 const KanjiText = styled.h2`
   font-size: 3rem;
+  font-weight: 400;
   margin-bottom: 2rem;
 `;
 
