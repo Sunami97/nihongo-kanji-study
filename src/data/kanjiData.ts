@@ -67,7 +67,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '憎む', yomikata: 'にくむ', meaning: '미워하다, 증오하다' },
       { kanji: '負担', yomikata: 'ふたん', meaning: '부담' },
       { kanji: '映る', yomikata: 'うつる', meaning: '비치다' },
-      { kanji: '下層', yomikata: 'かそう', meaning: '하층' },
+      { kanji: '下旬', yomikata: 'げじゅん', meaning: '하순' },
       { kanji: '恥', yomikata: 'はじ', meaning: '부끄러움, 수치' },
       { kanji: '偶然', yomikata: 'ぐうぜん', meaning: '우연히' },
       { kanji: '刺激', yomikata: 'しげき', meaning: '자극' },
