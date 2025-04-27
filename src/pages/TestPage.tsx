@@ -85,23 +85,28 @@ export default function TestPage() {
   const currentWord = wordList[currentIndex];
 
   const handleCheckAnswer = () => {
-    const correctMeanings = currentWord.meaning.split(',').map((item) => item.trim());
-    const meaningCorrect = correctMeanings.includes(userMeaning.trim());
-    const yomikataCorrect = userYomikata.trim() === currentWord.yomikata.trim();
-
-    const isCorrect = meaningCorrect && yomikataCorrect; // 🔥 둘 다 맞아야 true
-
+    const clean = (text: string) => text.replace(/\s/g, ''); // 모든 공백 제거
+  
+    const correctMeanings = currentWord.meaning
+      .split(',')
+      .map((item) => clean(item)); // 정답들도 공백 제거된 상태로!
+  
+    const meaningCorrect = correctMeanings.includes(clean(userMeaning)); // 사용자 입력도 공백 제거
+    const yomikataCorrect = clean(userYomikata) === clean(currentWord.yomikata); // 요미카타도 둘 다 공백 제거
+  
+    const isCorrect = meaningCorrect && yomikataCorrect; // 둘 다 맞아야 true
+  
     const newRecord: AnswerRecord = {
       kanji: currentWord.kanji,
       yomikata: currentWord.yomikata,
       correctMeaning: currentWord.meaning,
-      userMeaning: userMeaning.trim(),
+      userMeaning: userMeaning.trim(), // 기록은 원본 사용
       userYomikata: userYomikata.trim(),
       isCorrect,
     };
-
+  
     const newAnswers = [...answers, newRecord];
-
+  
     if (currentIndex + 1 < wordList.length) {
       setAnswers(newAnswers);
       setCurrentIndex(prev => prev + 1);
@@ -113,6 +118,8 @@ export default function TestPage() {
       });
     }
   };
+  
+  
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
