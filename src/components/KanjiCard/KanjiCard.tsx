@@ -48,6 +48,7 @@ const DetailWrapper = styled.div<{ isOpen: boolean }>`
 const Detail = styled.div`
   font-size: 1rem;
   color: #555;
+  font-weight: 500;
   word-break: keep-all;
 `;
 
@@ -68,8 +69,8 @@ export default function KanjiCard({ word, defaultOpen = false }: KanjiCardProps)
 
       <DetailWrapper isOpen={open}>
         <Detail>
-          <div><strong>{word.yomikata}</strong></div>
-          <div><strong>{word.meaning}</strong></div>
+          <div>{word.yomikata}</div>
+          <div>{word.meaning}</div>
         </Detail>
       </DetailWrapper>
     </Card>
