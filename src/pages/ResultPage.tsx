@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -63,6 +64,15 @@ export default function ResultPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   const location = useLocation();
+
+    useEffect(() => {
+      if (!chapter) {
+        navigate('/'); // chapter 없으면 홈으로
+      } else if (!subcategory) {
+        navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
+      }
+  
+    }, [chapter, subcategory, navigate]);
 
   const { answers } = location.state as { answers: AnswerRecord[] };
 

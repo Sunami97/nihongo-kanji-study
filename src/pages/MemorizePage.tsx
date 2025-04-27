@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
@@ -82,6 +82,15 @@ export default function MemorizePage() {
 
   const kanjiList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
 
+  useEffect(() => {
+    if (!chapter) {
+      navigate('/'); // chapter 없으면 홈으로
+    } else if (!subcategory) {
+      navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
+    }
+
+  }, [chapter, subcategory, navigate]);
+  
   const handleStartTest = () => {
     if (chapter && subcategory) {
       navigate(`/test/${chapter}/${subcategory}`);

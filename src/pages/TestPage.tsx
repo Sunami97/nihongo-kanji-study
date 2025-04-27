@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
 import styled from 'styled-components';
@@ -67,6 +67,14 @@ export default function TestPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   
+  useEffect(() => {
+    if (!chapter) {
+      navigate('/'); // chapter 없으면 홈으로
+    } else if (!subcategory) {
+      navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
+    }
+
+  }, [chapter, subcategory, navigate]);
   const wordList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
