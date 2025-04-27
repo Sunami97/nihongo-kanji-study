@@ -51,6 +51,20 @@ const Button = styled.button`
   }
 `;
 
+const BackButton = styled.button`
+  padding: 0.8rem 2rem;
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #757575;
+  }
+`;
+
 interface AnswerRecord {
   kanji: string;
   yomikata: string;
@@ -85,8 +99,8 @@ export default function ResultPage() {
     }
   };
 
-  const handleGoYearSelect = () => {
-    navigate(`/sub-category/${chapter}`);
+  const handleGoMemorize = () => {
+    navigate(`/memorize/${chapter}/${subcategory}`);
   };
 
   return (
@@ -119,7 +133,7 @@ export default function ResultPage() {
 
       <ButtonWrapper>
         <Button onClick={handleRetry}>다시 풀기</Button>
-        <Button onClick={handleGoYearSelect}>홈으로 가기</Button>
+        <BackButton onClick={handleGoMemorize}>돌아가기기</BackButton>
       </ButtonWrapper>
     </Container>
   );
