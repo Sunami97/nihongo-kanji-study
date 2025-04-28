@@ -55,7 +55,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '乏しい', yomikata: 'とぼしい', meaning: '모자라다, 부족하다' },
     ],
     '2020': [
-      { kanji: '下落', yomikata: 'げらく', meaning: '하락, 추락' },
+      { kanji: '下降', yomikata: 'かこう', meaning: '하락, 추락' },
       { kanji: '険しい', yomikata: 'けわしい', meaning: '험악하다, 험상궂다' },
       { kanji: '倒す', yomikata: 'たおす', meaning: '쓰러뜨리다, 무너뜨리다' },
       { kanji: '比較的', yomikata: 'ひかくてき', meaning: '비교적' },
