@@ -73,8 +73,9 @@ export default function SubCategoryPage() {
   ? Object.entries(kanjiData[chapter]).map(([name, words]) => ({
       name,
       words,
-    })).reverse()
+    }))
   : [];
+
   const handleSelectSubCategory = (subcategory: string) => {
     navigate(`/memorize/${chapter}/${subcategory}`);
   };
