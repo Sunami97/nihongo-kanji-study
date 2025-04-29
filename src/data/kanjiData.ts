@@ -156,7 +156,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '装置', yomikata: 'そうち', meaning: '장치' },
       { kanji: '針', yomikata: 'はり', meaning: '바늘' },
       { kanji: '占める', yomikata: 'しめる', meaning: '(비율·자리) 차지하다' },
-      { kanji: '抽象적', yomikata: 'ちゅうしょうてき', meaning: '추상적' },
+      { kanji: '抽象的', yomikata: 'ちゅうしょうてき', meaning: '추상적' },
       { kanji: '返却', yomikata: 'へんきゃく', meaning: '(책·CD) 반환, 반납' },
     ],
     '2011': [
