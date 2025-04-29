@@ -6,7 +6,7 @@ export interface KanjiWord {
 
 export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
   'chapter1': {
-    '2024': [
+    '_2024': [
       { kanji: '鮮やか', yomikata: 'あざやか', meaning: '선명함' },
       { kanji: '実践', yomikata: 'じっせん', meaning: '실천' },
       { kanji: '農薬', yomikata: 'のうやく', meaning: '농약' },
@@ -18,7 +18,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '背骨', yomikata: 'せぼね', meaning: '척추' },
       { kanji: '迷う', yomikata: 'まよう', meaning: '망설이다' },
     ],
-    '2023': [
+    '_2023': [
       { kanji: '握手', yomikata: 'あくしゅ', meaning: '악수' },
       { kanji: '幼い', yomikata: 'おさない', meaning: '어리다, 유치하다' },
       { kanji: '善良だ', yomikata: 'ぜんりょうだ', meaning: '선량하다, 어질다' },
@@ -30,7 +30,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '削除', yomikata: 'さくじょ', meaning: '삭제' },
       { kanji: '乱れる', yomikata: 'みだれる', meaning: '흐트러지다, 흐려지다' },
     ],
-    '2022': [
+    '_2022': [
       { kanji: '勇ましい', yomikata: 'いさましい', meaning: '용감하다' },
       { kanji: '警備', yomikata: 'けいび', meaning: '경비' },
       { kanji: '素材', yomikata: 'そざい', meaning: '소재' },
@@ -42,7 +42,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '世間', yomikata: 'せけん', meaning: '세간, 세상' },
       { kanji: '途端に', yomikata: 'とたんに', meaning: '바로 그 순간' },
     ],
-    '2021': [
+    '_2021': [
       { kanji: '焦る', yomikata: 'あせる', meaning: '초조해하다' },
       { kanji: '拡充', yomikata: 'かくじゅう', meaning: '확충' },
       { kanji: '情景', yomikata: 'じょうけい', meaning: '정경, 광경' },
@@ -54,14 +54,14 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '賛否', yomikata: 'さんぴ', meaning: '찬반, 가부' },
       { kanji: '乏しい', yomikata: 'とぼしい', meaning: '모자라다, 부족하다' },
     ],
-    '2020': [
+    '_2020': [
       { kanji: '下降', yomikata: 'かこう', meaning: '하락, 추락' },
       { kanji: '険しい', yomikata: 'けわしい', meaning: '험악하다, 험상궂다' },
       { kanji: '倒す', yomikata: 'たおす', meaning: '쓰러뜨리다, 무너뜨리다' },
       { kanji: '比較的', yomikata: 'ひかくてき', meaning: '비교적' },
       { kanji: '損害', yomikata: 'そんがい', meaning: '손해' },
     ],
-    '2019': [
+    '_2019': [
       { kanji: '圧倒的', yomikata: 'あっとうてき', meaning: '압도적' },
       { kanji: '軽傷', yomikata: 'けいしょう', meaning: '경상' },
       { kanji: '憎む', yomikata: 'にくむ', meaning: '미워하다, 증오하다' },
@@ -73,7 +73,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '刺激', yomikata: 'しげき', meaning: '자극' },
       { kanji: '等しい', yomikata: 'ひとしい', meaning: '동등하다' },
     ],
-    '2018': [
+    '_2018': [
       { kanji: '企画', yomikata: 'きかく', meaning: '기획' },
       { kanji: '湿る', yomikata: 'しめる', meaning: '축축해지다, 습기차다' },
       { kanji: '抽選', yomikata: 'ちゅうせん', meaning: '추첨' },
@@ -85,7 +85,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '総額', yomikata: 'そうがく', meaning: '총액' },
       { kanji: '離れる', yomikata: 'はなれる', meaning: '멀어지다, 떨어지다' },
     ],
-    '2017': [
+    '_2017': [
       { kanji: '幼い', yomikata: 'おさない', meaning: '어리다, 유치하다' },
       { kanji: '絞る', yomikata: 'しぼる', meaning: '조이다, (쥐어)짜다' },
       { kanji: '強火', yomikata: 'つよび', meaning: '센 불' },
@@ -97,7 +97,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '垂直', yomikata: 'すいちょく', meaning: '수직' },
       { kanji: '乱れる', yomikata: 'みだれる', meaning: '흐트러지다, 흐려지다' },
     ],
-    '2016': [
+    '_2016': [
       { kanji: '怪しい', yomikata: 'あやしい', meaning: '수상하다' },
       { kanji: '願望', yomikata: 'がんぼう', meaning: '바람, 소원' },
       { kanji: '治療', yomikata: 'ちりょう', meaning: '치료' },
@@ -111,7 +111,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ],
   },
   'chapter2': {
-    '2015': [
+    '_2015': [
       { kanji: '囲む', yomikata: 'かこむ', meaning: '둘러싸다' },
       { kanji: '現象', yomikata: 'げんしょう', meaning: '현상' },
       { kanji: '乏しい', yomikata: 'とぼしい', meaning: '(경험·물자) 부족하다' },
@@ -123,7 +123,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '損害', yomikata: 'そんがい', meaning: '손해' },
       { kanji: '含める', yomikata: 'ふくめる', meaning: '포함하다' },
     ],
-    '2014': [
+    '_2014': [
       { kanji: '圧勝', yomikata: 'あっしょう', meaning: '압승' },
       { kanji: '極端', yomikata: 'きょくたん', meaning: '극단적임, 아주 지나침' },
       { kanji: '除く', yomikata: 'のぞく', meaning: '제거하다, 제외하다' },
@@ -135,7 +135,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '継続', yomikata: 'けいぞく', meaning: '계속' },
       { kanji: '戻す', yomikata: 'もどす', meaning: '(원래 자리·상태) 되돌리다' },
     ],
-    '2013': [
+    '_2013': [
       { kanji: '改めて', yomikata: 'あらためて', meaning: '다시, 재차' },
       { kanji: '勧誘', yomikata: 'かんゆう', meaning: '권유' },
       { kanji: '積む', yomikata: 'つむ', meaning: '(짐·경력) 쌓다, 싣다' },
@@ -147,7 +147,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '清潔', yomikata: 'せいけつ', meaning: '청결함' },
       { kanji: '模範', yomikata: 'もはん', meaning: '모범' },
     ],
-    '2012': [
+    '_2012': [
       { kanji: '削除', yomikata: 'さくじょ', meaning: '삭제' },
       { kanji: '焦点', yomikata: 'しょうてん', meaning: '초점' },
       { kanji: '破片', yomikata: 'はへん', meaning: '파편' },
@@ -159,7 +159,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '抽象的', yomikata: 'ちゅうしょうてき', meaning: '추상적' },
       { kanji: '返却', yomikata: 'へんきゃく', meaning: '(책·CD) 반환, 반납' },
     ],
-    '2011': [
+    '_2011': [
       { kanji: '祝う', yomikata: 'いわう', meaning: '축하하다' },
       { kanji: '地元', yomikata: 'じもと', meaning: '그 지역, 고장, 연고지' },
       { kanji: '豊富', yomikata: 'ほうふ', meaning: '풍부함' },
@@ -171,7 +171,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '調節', yomikata: 'ちょうせつ', meaning: '조절' },
       { kanji: '敗れる', yomikata: 'やぶれる', meaning: '지다, 패배하다' },
     ],
-    '2010': [
+    '_2010': [
       { kanji: '辛い', yomikata: 'からい', meaning: '맵다' },
       { kanji: '相互', yomikata: 'そうご', meaning: '상호, 서로' },
       { kanji: '治療', yomikata: 'ちりょう', meaning: '치료' },
@@ -185,6 +185,241 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ],
   },
   'chapter3': {
+    "あ行": [
+      { kanji: "与える", yomikata: "あたえる", meaning: "주다" },
+      { kanji: "温かい", yomikata: "あたたかい", meaning: "다정하다" },
+      { kanji: "誤り", yomikata: "あやまり", meaning: "잘못, 틀림, 실수" },
+      { kanji: "改めて", yomikata: "あらためて", meaning: "다시, 새삼스레" },
+      { kanji: "案外", yomikata: "あんがい", meaning: "뜻밖에, 의외로" },
+      { kanji: "言い難い", yomikata: "いいがたい", meaning: "말하기 어렵다" },
+      { kanji: "異常", yomikata: "いじょう", meaning: "이상함" },
+      { kanji: "移転", yomikata: "いてん", meaning: "이전" },
+      { kanji: "祈る", yomikata: "いのる", meaning: "기도하다" },
+      { kanji: "違反", yomikata: "いはん", meaning: "위반" },
+      { kanji: "医療", yomikata: "いりょう", meaning: "의료" },
+      { kanji: "印刷", yomikata: "いんさつ", meaning: "인쇄" },
+      { kanji: "植木", yomikata: "うえき", meaning: "정원수, 분재" },
+      { kanji: "浮く", yomikata: "うく", meaning: "떠오르다, 들뜨다" },
+      { kanji: "疑い", yomikata: "うたがい", meaning: "의심" },
+      { kanji: "宇宙", yomikata: "うちゅう", meaning: "우주" },
+      { kanji: "運送", yomikata: "うんそう", meaning: "운송" },
+      { kanji: "偉い", yomikata: "えらい", meaning: "훌륭하다, 대단하다" },
+      { kanji: "得る", yomikata: "える", meaning: "얻다" },
+      { kanji: "延期", yomikata: "えんき", meaning: "연기, 미룸" },
+      { kanji: "応援", yomikata: "おうえん", meaning: "응원" },
+      { kanji: "応対", yomikata: "おうたい", meaning: "응대, 접대" },
+      { kanji: "欧米", yomikata: "おうべい", meaning: "구미, 유럽과 미국" },
+      { kanji: "~億", yomikata: "おく", meaning: "~억" },
+      { kanji: "置く", yomikata: "おく", meaning: "놓다, 두다" },
+      { kanji: "怒る", yomikata: "おこる", meaning: "화내다" },
+      { kanji: "幼い", yomikata: "おさない", meaning: "어리다, 미숙하다" },
+      { kanji: "踊り", yomikata: "おどり", meaning: "춤" },
+      { kanji: "主", yomikata: "おも", meaning: "주된" }
+    ],
+
+    "か行": [
+      { kanji: "改善", yomikata: "かいぜん", meaning: "개선" },
+      { kanji: "会談", yomikata: "かいだん", meaning: "회담" },
+      { kanji: "快適", yomikata: "かいてき", meaning: "쾌적함" },
+      { kanji: "回復", yomikata: "かいふく", meaning: "회복" },
+      { kanji: "重ねる", yomikata: "かさねる", meaning: "거듭하다, 겹치다" },
+      { kanji: "賢い", yomikata: "かしこい", meaning: "현명하다, 영리하다" },
+      { kanji: "傾く", yomikata: "かたむく", meaning: "기울다" },
+      { kanji: "仮定", yomikata: "かてい", meaning: "가정" },
+      { kanji: "可能性", yomikata: "かのうせい", meaning: "가능성" },
+      { kanji: "貨物", yomikata: "かもつ", meaning: "화물" },
+      { kanji: "観察", yomikata: "かんさつ", meaning: "관찰" },
+      { kanji: "乾燥", yomikata: "かんそう", meaning: "건조" },
+      { kanji: "缶詰", yomikata: "かんづめ", meaning: "통조림" },
+      { kanji: "完了", yomikata: "かんりょう", meaning: "완료" },
+      { kanji: "危険", yomikata: "きけん", meaning: "위험" },
+      { kanji: "機嫌", yomikata: "きげん", meaning: "기분, 심기" },
+      { kanji: "記事", yomikata: "きじ", meaning: "기사" },
+      { kanji: "規制", yomikata: "きせい", meaning: "규제" },
+      { kanji: "決まる", yomikata: "きまる", meaning: "결정되다, 정해지다" },
+      { kanji: "共感", yomikata: "きょうかん", meaning: "공감" },
+      { kanji: "協力", yomikata: "きょうりょく", meaning: "협력" },
+      { kanji: "漁業", yomikata: "ぎょぎょう", meaning: "어업" },
+      { kanji: "記録", yomikata: "きろく", meaning: "기록" },
+      { kanji: "議論", yomikata: "ぎろん", meaning: "의논, 논쟁" },
+      { kanji: "空港", yomikata: "くうこう", meaning: "공항" },
+      { kanji: "靴", yomikata: "くつ", meaning: "신발, 구두" },
+      { kanji: "雲", yomikata: "くも", meaning: "구름" },
+      { kanji: "暮らす", yomikata: "くらす", meaning: "살다, 생활하다" },
+      { kanji: "芸能", yomikata: "げいのう", meaning: "예능, 연예" },
+      { kanji: "警備", yomikata: "けいび", meaning: "경비" },
+      { kanji: "結果", yomikata: "けっか", meaning: "결과" },
+      { kanji: "険しい", yomikata: "けわしい", meaning: "험하다, 험상궂다" },
+      { kanji: "原因", yomikata: "げんいん", meaning: "원인" },
+      { kanji: "厳重", yomikata: "げんじゅう", meaning: "엄중함" },
+      { kanji: "建設", yomikata: "けんせつ", meaning: "건설" },
+      { kanji: "講演", yomikata: "こうえん", meaning: "강연" },
+      { kanji: "郊外", yomikata: "こうがい", meaning: "교외" },
+      { kanji: "公害", yomikata: "こうがい", meaning: "공해" },
+      { kanji: "交差点", yomikata: "こうさてん", meaning: "교차로" },
+      { kanji: "高層", yomikata: "こうそう", meaning: "고층" },
+      { kanji: "声", yomikata: "こえ", meaning: "(목)소리" },
+      { kanji: "越える", yomikata: "こえる", meaning: "넘다, 초월하다" },
+      { kanji: "氷", yomikata: "こおり", meaning: "얼음" },
+      { kanji: "故郷", yomikata: "こきょう", meaning: "고향" },
+      { kanji: "小包", yomikata: "こづつみ", meaning: "소포" },
+      { kanji: "異なる", yomikata: "ことなる", meaning: "다르다" },
+      { kanji: "断る", yomikata: "ことわる", meaning: "거절하다" },
+      { kanji: "混乱", yomikata: "こんらん", meaning: "혼란" }
+    ],
+
+    "さ行": [
+      { kanji: "裁判", yomikata: "さいばん", meaning: "재판" },
+      { kanji: "再利用", yomikata: "さいりよう", meaning: "재사용" },
+      { kanji: "幸い", yomikata: "さいわい", meaning: "다행임" },
+      { kanji: "作業", yomikata: "さぎょう", meaning: "작업" },
+      { kanji: "寒い", yomikata: "さむい", meaning: "춥다" },
+      { kanji: "参考", yomikata: "さんこう", meaning: "참고" },
+      { kanji: "事件", yomikata: "じけん", meaning: "사건" },
+      { kanji: "指示", yomikata: "しじ", meaning: "지시" },
+      { kanji: "地震", yomikata: "じしん", meaning: "지진" },
+      { kanji: "島", yomikata: "しま", meaning: "섬" },
+      { kanji: "占める", yomikata: "しめる", meaning: "(비율·자리) 차지하다" },
+      { kanji: "宿泊", yomikata: "しゅくはく", meaning: "숙박" },
+      { kanji: "手術", yomikata: "しゅじゅつ", meaning: "수술" },
+      { kanji: "出版", yomikata: "しゅっぱん", meaning: "출판" },
+      { kanji: "首脳", yomikata: "しゅのう", meaning: "수뇌, 정상" },
+      { kanji: "寿命", yomikata: "じゅみょう", meaning: "수명" },
+      { kanji: "主要", yomikata: "しゅよう", meaning: "주요" },
+      { kanji: "順調", yomikata: "じゅんちょう", meaning: "순조로움" },
+      { kanji: "賞", yomikata: "しょう", meaning: "상" },
+      { kanji: "状況", yomikata: "じょうきょう", meaning: "상황" },
+      { kanji: "正直", yomikata: "しょうじき", meaning: "정직함, 솔직함" },
+      { kanji: "商品", yomikata: "しょうひん", meaning: "상품" },
+      { kanji: "情報", yomikata: "じょうほう", meaning: "정보" },
+      { kanji: "諸国", yomikata: "しょこく", meaning: "여러 나라" },
+      { kanji: "職場", yomikata: "しょくば", meaning: "직장" },
+      { kanji: "処理", yomikata: "しょり", meaning: "처리" },
+      { kanji: "資料", yomikata: "しりょう", meaning: "자료" },
+      { kanji: "進学率", yomikata: "しんがくりつ", meaning: "진학률" },
+      { kanji: "心臓", yomikata: "しんぞう", meaning: "심장" },
+      { kanji: "信用", yomikata: "しんよう", meaning: "신용" },
+      { kanji: "信頼", yomikata: "しんらい", meaning: "신뢰" },
+      { kanji: "人類", yomikata: "じんるい", meaning: "인류" },
+      { kanji: "数年", yomikata: "すうねん", meaning: "여러 해, 수년" },
+      { kanji: "性格", yomikata: "せいかく", meaning: "성격" },
+      { kanji: "成功", yomikata: "せいこう", meaning: "성공" },
+      { kanji: "政治", yomikata: "せいじ", meaning: "정치" },
+      { kanji: "成長", yomikata: "せいちょう", meaning: "성장" },
+      { kanji: "政党", yomikata: "せいとう", meaning: "정당" },
+      { kanji: "責任", yomikata: "せきにん", meaning: "책임" },
+      { kanji: "設備", yomikata: "せつび", meaning: "설비" },
+      { kanji: "戦争", yomikata: "せんそう", meaning: "전쟁" },
+      { kanji: "選択", yomikata: "せんたく", meaning: "선택" },
+      { kanji: "全般", yomikata: "ぜんぱん", meaning: "전반, 전체" },
+      { kanji: "操作", yomikata: "そうさ", meaning: "조작" },
+      { kanji: "想像", yomikata: "そうぞう", meaning: "상상" },
+      { kanji: "備える", yomikata: "そなえる", meaning: "갖추다, 대비하다" },
+      { kanji: "損得", yomikata: "そんとく", meaning: "손익, 손해와 이득" }
+    ],
+
+    "た行": [
+      { kanji: "退院", yomikata: "たいいん", meaning: "퇴원" },
+      { kanji: "大臣", yomikata: "だいじん", meaning: "대신, 장관" },
+      { kanji: "代表", yomikata: "だいひょう", meaning: "대표" },
+      { kanji: "他人", yomikata: "たにん", meaning: "타인" },
+      { kanji: "単純", yomikata: "たんじゅん", meaning: "단순함" },
+      { kanji: "担当者", yomikata: "たんとうしゃ", meaning: "담당자" },
+      { kanji: "知恵", yomikata: "ちえ", meaning: "지혜" },
+      { kanji: "地球", yomikata: "ちきゅう", meaning: "지구" },
+      { kanji: "知識", yomikata: "ちしき", meaning: "지식" },
+      { kanji: "遅刻", yomikata: "ちこく", meaning: "지각" },
+      { kanji: "調査", yomikata: "ちょうさ", meaning: "조사" },
+      { kanji: "駐車", yomikata: "ちゅうしゃ", meaning: "주차" },
+      { kanji: "著者", yomikata: "ちょしゃ", meaning: "저자" },
+      { kanji: "貯蔵", yomikata: "ちょぞう", meaning: "저장" },
+      { kanji: "通行", yomikata: "つうこう", meaning: "통행" },
+      { kanji: "次々と", yomikata: "つぎつぎと", meaning: "잇달아" },
+      { kanji: "机", yomikata: "つくえ", meaning: "책상" },
+      { kanji: "伝える", yomikata: "つたえる", meaning: "전하다" },
+      { kanji: "適切", yomikata: "てきせつ", meaning: "적절함" },
+      { kanji: "展開", yomikata: "てんかい", meaning: "전개" },
+      { kanji: "登山", yomikata: "とざん", meaning: "등산" },
+      { kanji: "突然", yomikata: "とつぜん", meaning: "돌진, 갑자기" },
+      { kanji: "届く", yomikata: "とどく", meaning: "도착하다, 이르다" },
+      { kanji: "努力", yomikata: "どりょく", meaning: "노력" },
+      { kanji: "泥", yomikata: "どろ", meaning: "진흙" }
+    ],
+
+    "な行": [
+      { kanji: "内容", yomikata: "ないよう", meaning: "내용" },
+      { kanji: "仲良く", yomikata: "なかよく", meaning: "사이좋게" },
+      { kanji: "悩む", yomikata: "なやむ", meaning: "고민하다" },
+      { kanji: "日課", yomikata: "にっか", meaning: "일과" },
+      { kanji: "盗む", yomikata: "ぬすむ", meaning: "훔치다" },
+      { kanji: "塗る", yomikata: "ぬる", meaning: "바르다, 칠하다" },
+      { kanji: "熱演", yomikata: "ねつい", meaning: "열연" },
+      { kanji: "年齢", yomikata: "ねんれい", meaning: "연령, 나이" },
+      { kanji: "述べる", yomikata: "のべる", meaning: "서술하다, 말하다" },
+      { kanji: "残る", yomikata: "のこる", meaning: "남다" }
+    ],
+
+    "は行": [
+      { kanji: "〜倍", yomikata: "〜ばい", meaning: "배 (배수)" },
+      { kanji: "配布", yomikata: "はいふ", meaning: "배포" },
+      { kanji: "爆発", yomikata: "ばくはつ", meaning: "폭발" },
+      { kanji: "発射", yomikata: "はっしゃ", meaning: "발사" },
+      { kanji: "張り切る", yomikata: "はりきる", meaning: "기운이 넘치다" },
+      { kanji: "犯罪", yomikata: "はんざい", meaning: "범죄" },
+      { kanji: "反対", yomikata: "はんたい", meaning: "반대" },
+      { kanji: "判断", yomikata: "はんだん", meaning: "판단" },
+      { kanji: "販売", yomikata: "はんばい", meaning: "판매" },
+      { kanji: "比較的", yomikata: "ひかくてき", meaning: "비교적" },
+      { kanji: "悲劇", yomikata: "ひげき", meaning: "비극" },
+      { kanji: "皮膚", yomikata: "ひふ", meaning: "피부" },
+      { kanji: "〜秒", yomikata: "〜びょう", meaning: "초" },
+      { kanji: "評価", yomikata: "ひょうか", meaning: "평가" },
+      { kanji: "標識", yomikata: "ひょうしき", meaning: "표지, 표식" },
+      { kanji: "舞台", yomikata: "ぶたい", meaning: "무대" },
+      { kanji: "部分的", yomikata: "ぶぶんてき", meaning: "부분적" },
+      { kanji: "平均", yomikata: "へいきん", meaning: "평균" },
+      { kanji: "減る", yomikata: "へる", meaning: "줄다" },
+      { kanji: "貿易", yomikata: "ぼうえき", meaning: "무역" },
+      { kanji: "方針", yomikata: "ほうしん", meaning: "방침" },
+      { kanji: "法律", yomikata: "ほうりつ", meaning: "법률" },
+      { kanji: "星", yomikata: "ほし", meaning: "별" },
+      { kanji: "掘る", yomikata: "ほる", meaning: "파다, 캐다" }
+    ],
+
+    "ま行": [
+      { kanji: "招く", yomikata: "まねく", meaning: "초대하다, 부르다, 초래하다" },
+      { kanji: "認める", yomikata: "みとめる", meaning: "인정하다" },
+      { kanji: "未来", yomikata: "みらい", meaning: "미래" },
+      { kanji: "迎える", yomikata: "むかえる", meaning: "맞이하다" },
+      { kanji: "面倒", yomikata: "めんどう", meaning: "귀찮음, 번거로움" },
+      { kanji: "目的", yomikata: "もくてき", meaning: "목적" },
+      { kanji: "求める", yomikata: "もとめる", meaning: "구하다, 청하다" },
+      { kanji: "物語", yomikata: "ものがたり", meaning: "이야기" }
+    ],
+
+    "や行": [
+      { kanji: "役目", yomikata: "やくめ", meaning: "임무" },
+      { kanji: "焼ける", yomikata: "やける", meaning: "(불)타다, 구워지다" },
+      { kanji: "家賃", yomikata: "やちん", meaning: "집세" },
+      { kanji: "雇う", yomikata: "やとう", meaning: "고용하다" },
+      { kanji: "優勝", yomikata: "ゆうしょう", meaning: "우승" },
+      { kanji: "豊か", yomikata: "ゆたか", meaning: "풍요로움" },
+      { kanji: "良い", yomikata: "よい", meaning: "좋다" },
+      { kanji: "溶岩", yomikata: "ようがん", meaning: "용암" }
+    ],
+
+    "ら・わ行": [
+      { kanji: "流行", yomikata: "りゅうこう", meaning: "유행" },
+      { kanji: "両替", yomikata: "りょうがえ", meaning: "환전" },
+      { kanji: "両国", yomikata: "りょうこく", meaning: "양국" },
+      { kanji: "例外", yomikata: "れいがい", meaning: "예외" },
+      { kanji: "冷凍", yomikata: "れいとう", meaning: "냉동" },
+      { kanji: "歴史", yomikata: "れきし", meaning: "역사" },
+      { kanji: "連続", yomikata: "れんぞく", meaning: "연속" },
+      { kanji: "連絡", yomikata: "れんらく", meaning: "연락" },
+      { kanji: "割合", yomikata: "わりあい", meaning: "비율" },
+      { kanji: "笑う", yomikata: "わらう", meaning: "웃다" }
+    ]
   },
   'chapter4': {
   },
