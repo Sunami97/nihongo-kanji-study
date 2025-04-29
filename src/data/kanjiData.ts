@@ -6,7 +6,7 @@ export interface KanjiWord {
 
 export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
   'chapter1': {
-    ' 2024 ': [
+    ' 2024': [
       { kanji: '鮮やか', yomikata: 'あざやか', meaning: '선명함' },
       { kanji: '実践', yomikata: 'じっせん', meaning: '실천' },
       { kanji: '農薬', yomikata: 'のうやく', meaning: '농약' },
@@ -18,7 +18,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '背骨', yomikata: 'せぼね', meaning: '척추' },
       { kanji: '迷う', yomikata: 'まよう', meaning: '망설이다' },
     ],
-    ' 2023 ': [
+    ' 2023': [
       { kanji: '握手', yomikata: 'あくしゅ', meaning: '악수' },
       { kanji: '幼い', yomikata: 'おさない', meaning: '어리다, 유치하다' },
       { kanji: '善良だ', yomikata: 'ぜんりょうだ', meaning: '선량하다, 어질다' },
@@ -30,7 +30,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '削除', yomikata: 'さくじょ', meaning: '삭제' },
       { kanji: '乱れる', yomikata: 'みだれる', meaning: '흐트러지다, 흐려지다' },
     ],
-    ' 2022 ': [
+    ' 2022': [
       { kanji: '勇ましい', yomikata: 'いさましい', meaning: '용감하다' },
       { kanji: '警備', yomikata: 'けいび', meaning: '경비' },
       { kanji: '素材', yomikata: 'そざい', meaning: '소재' },
@@ -42,7 +42,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '世間', yomikata: 'せけん', meaning: '세간, 세상' },
       { kanji: '途端に', yomikata: 'とたんに', meaning: '바로 그 순간' },
     ],
-    ' 2021 ': [
+    ' 2021': [
       { kanji: '焦る', yomikata: 'あせる', meaning: '초조해하다' },
       { kanji: '拡充', yomikata: 'かくじゅう', meaning: '확충' },
       { kanji: '情景', yomikata: 'じょうけい', meaning: '정경, 광경' },
@@ -54,14 +54,14 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '賛否', yomikata: 'さんぴ', meaning: '찬반, 가부' },
       { kanji: '乏しい', yomikata: 'とぼしい', meaning: '모자라다, 부족하다' },
     ],
-    ' 2020 ': [
+    ' 2020': [
       { kanji: '下降', yomikata: 'かこう', meaning: '하락, 추락' },
       { kanji: '険しい', yomikata: 'けわしい', meaning: '험악하다, 험상궂다' },
       { kanji: '倒す', yomikata: 'たおす', meaning: '쓰러뜨리다, 무너뜨리다' },
       { kanji: '比較的', yomikata: 'ひかくてき', meaning: '비교적' },
       { kanji: '損害', yomikata: 'そんがい', meaning: '손해' },
     ],
-    ' 2019 ': [
+    ' 2019': [
       { kanji: '圧倒的', yomikata: 'あっとうてき', meaning: '압도적' },
       { kanji: '軽傷', yomikata: 'けいしょう', meaning: '경상' },
       { kanji: '憎む', yomikata: 'にくむ', meaning: '미워하다, 증오하다' },
@@ -73,7 +73,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '刺激', yomikata: 'しげき', meaning: '자극' },
       { kanji: '等しい', yomikata: 'ひとしい', meaning: '동등하다' },
     ],
-    ' 2018 ': [
+    ' 2018': [
       { kanji: '企画', yomikata: 'きかく', meaning: '기획' },
       { kanji: '湿る', yomikata: 'しめる', meaning: '축축해지다, 습기차다' },
       { kanji: '抽選', yomikata: 'ちゅうせん', meaning: '추첨' },
@@ -85,7 +85,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '総額', yomikata: 'そうがく', meaning: '총액' },
       { kanji: '離れる', yomikata: 'はなれる', meaning: '멀어지다, 떨어지다' },
     ],
-    ' 2017 ': [
+    ' 2017': [
       { kanji: '幼い', yomikata: 'おさない', meaning: '어리다, 유치하다' },
       { kanji: '絞る', yomikata: 'しぼる', meaning: '조이다, (쥐어)짜다' },
       { kanji: '強火', yomikata: 'つよび', meaning: '센 불' },
@@ -97,7 +97,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '垂直', yomikata: 'すいちょく', meaning: '수직' },
       { kanji: '乱れる', yomikata: 'みだれる', meaning: '흐트러지다, 흐려지다' },
     ],
-    ' 2016 ': [
+    ' 2016': [
       { kanji: '怪しい', yomikata: 'あやしい', meaning: '수상하다' },
       { kanji: '願望', yomikata: 'がんぼう', meaning: '바람, 소원' },
       { kanji: '治療', yomikata: 'ちりょう', meaning: '치료' },
