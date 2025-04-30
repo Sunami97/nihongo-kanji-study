@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
 import styled from 'styled-components';
@@ -90,6 +90,11 @@ export default function TestPage() {
   const [userMeaning, setUserMeaning] = useState('');
   const [userYomikata, setUserYomikata] = useState('');
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
+  const meaningInputRef = useRef<HTMLInputElement>(null);
+
+  const focusMeaningInput = () => {
+    meaningInputRef.current?.focus();
+  };
 
   const currentWord = shuffledWordList[currentIndex];
 
@@ -98,14 +103,14 @@ export default function TestPage() {
 
     const clean = (text: string) =>
       text.replace(/\s/g, ''); // 공백 제거
-    
+
     const removeParentheses = (text: string): string =>
       text.replace(/\([^)]*\)/g, ''); // 괄호와 그 안 내용 제거
-    
+
     const correctMeanings = removeParentheses(currentWord.meaning) // 괄호 제거
       .split(',')
       .map(item => clean(item)); // 공백 제거
-    
+
     const meaningCorrect = correctMeanings.includes(clean(userMeaning));
     // const yomikataCorrect = clean(userYomikata) === clean(currentWord.yomikata);
     // const isCorrect = meaningCorrect && yomikataCorrect;
@@ -126,19 +131,21 @@ export default function TestPage() {
       setCurrentIndex((prev) => prev + 1);
       setUserMeaning('');
       setUserYomikata('');
+      setTimeout(focusMeaningInput, 0);
     } else {
       navigate(`/result/${chapter}/${subcategory}`, {
         state: { answers: newAnswers },
       });
     }
   };
-  
+
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1);
       setUserMeaning('');
       setUserYomikata('');
+      setTimeout(focusMeaningInput, 0);
     }
   };
 
@@ -170,7 +177,13 @@ export default function TestPage() {
           type="text"
           value={userMeaning}
           placeholder="뜻 입력"
+          ref={meaningInputRef}
           onChange={(e) => setUserMeaning(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleCheckAnswer();
+            }
+          }}
         />
       </div>
 
