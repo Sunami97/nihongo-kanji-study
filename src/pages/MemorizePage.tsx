@@ -5,6 +5,7 @@ import KanjiCard from '@/components/KanjiCard/KanjiCard';
 import styled from 'styled-components';
 import { KanjiWord } from '@/data/kanjiData';
 import { shuffleArray } from '@/utils/shuffleArray';
+import { FaShuffle } from "react-icons/fa6";
 
 const Container = styled.div`
   padding: 4rem 2rem;
@@ -81,14 +82,12 @@ export default function MemorizePage() {
   const navigate = useNavigate();
   const [isAllOpen, setIsAllOpen] = useState(false);
 
- 
-  const kanjiList: KanjiWord[] = useMemo(() => {
+  const [kanjiList, setKanjiList] = useState<KanjiWord[]>(() => {
     if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
       return shuffleArray(kanjiData[chapter][subcategory]);
     }
     return [];
-  }, [chapter, subcategory]);
-  
+  });
 
   useEffect(() => {
     if (!chapter) {
@@ -106,6 +105,13 @@ export default function MemorizePage() {
       navigate(`/test/${chapter}/${subcategory}`);
     }
   };
+
+  const handleShuffleList = () => {
+    if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
+      setKanjiList(shuffleArray(kanjiData[chapter][subcategory]));
+    }
+  };
+
 
   const handleToggleAll = () => {
     setIsAllOpen(prev => !prev);
@@ -130,6 +136,7 @@ export default function MemorizePage() {
 
       {kanjiList.length > 0 && (
         <ButtonWrapper>
+          <Button onClick={handleShuffleList}><FaShuffle /></Button>
           <Button onClick={handleToggleAll}>
             {isAllOpen ? '접기' : '펼치기'}
           </Button>
