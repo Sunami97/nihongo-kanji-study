@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
@@ -81,10 +81,15 @@ export default function MemorizePage() {
   const navigate = useNavigate();
   const [isAllOpen, setIsAllOpen] = useState(false);
 
-  const kanjiList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory]
-  ? shuffleArray(kanjiData[chapter][subcategory])
-  : [];
+ 
+  const kanjiList: KanjiWord[] = useMemo(() => {
+    if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
+      return shuffleArray(kanjiData[chapter][subcategory]);
+    }
+    return [];
+  }, [chapter, subcategory]);
   
+
   useEffect(() => {
     if (!chapter) {
       navigate('/'); // chapter 없으면 홈으로
