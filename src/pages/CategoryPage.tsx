@@ -26,7 +26,7 @@ const ButtonWrapper = styled.div`
 const ChapterButton = styled.button`
   margin: 0.5rem;
   padding: 1rem 2rem;
-  background-color: #4caf50;
+  background-color: #f673c0;
   color: white;
   border: none;
   border-radius: 8px;
@@ -36,7 +36,7 @@ const ChapterButton = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #45a049;
+    background-color: #f12ca5;
   }
 `;
 
