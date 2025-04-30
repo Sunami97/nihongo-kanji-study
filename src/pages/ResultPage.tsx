@@ -123,9 +123,9 @@ export default function ResultPage() {
         <List>
           {wrongAnswers.map((answer, idx) => (
             <Item key={idx} isCorrect={false}>
-              {answer.kanji}<br />
-              정답 - {answer.correctMeaning} / {answer.yomikata}<br />
-              내 답 - {answer.userMeaning} / {answer.userYomikata}<br />
+              {answer.kanji}({answer.yomikata})<br />
+              정답 - {answer.correctMeaning}<br />
+              내 답 - {answer.userMeaning}<br />
             </Item>
           ))}
         </List>
