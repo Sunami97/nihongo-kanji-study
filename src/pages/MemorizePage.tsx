@@ -84,7 +84,7 @@ export default function MemorizePage() {
 
   const [kanjiList, setKanjiList] = useState<KanjiWord[]>(() => {
     if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
-      return shuffleArray(kanjiData[chapter][subcategory]);
+      return kanjiData[chapter][subcategory];
     }
     return [];
   });
