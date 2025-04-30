@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
