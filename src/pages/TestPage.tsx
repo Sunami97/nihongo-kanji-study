@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
 import styled from 'styled-components';
 import { AnswerRecord } from '@/types/kanji.types';
+import { shuffleArray } from '@/utils/shuffleArray';
+
 const Container = styled.div`
   padding: 2rem;
   text-align: center;
@@ -67,59 +69,69 @@ const BackButton = styled.button`
 export default function TestPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     if (!chapter) {
-      navigate('/'); // chapter 없으면 홈으로
+      navigate('/');
     } else if (!subcategory) {
-      navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
+      navigate(`/sub-category/${chapter}`);
     }
-
   }, [chapter, subcategory, navigate]);
-  const wordList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
+
+  //처음 한 번만 랜덤 섞기
+  const [shuffledWordList] = useState<KanjiWord[]>(() => {
+    if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
+      return shuffleArray(kanjiData[chapter][subcategory]);
+    }
+    return [];
+  });
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userMeaning, setUserMeaning] = useState('');
   const [userYomikata, setUserYomikata] = useState('');
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
 
-  const currentWord = wordList[currentIndex];
+  const currentWord = shuffledWordList[currentIndex];
 
   const handleCheckAnswer = () => {
-    const clean = (text: string) => text.replace(/\s/g, ''); // 모든 공백 제거
-  
-    const correctMeanings = currentWord.meaning
+    if (!currentWord) return;
+
+    const clean = (text: string) =>
+      text.replace(/\s/g, ''); // 공백 제거
+    
+    const removeParentheses = (text: string): string =>
+      text.replace(/\([^)]*\)/g, ''); // 괄호와 그 안 내용 제거
+    
+    const correctMeanings = removeParentheses(currentWord.meaning) // 괄호 제거
       .split(',')
-      .map((item) => clean(item)); // 정답들도 공백 제거된 상태로!
-  
-    const meaningCorrect = correctMeanings.includes(clean(userMeaning)); // 사용자 입력도 공백 제거
-    const yomikataCorrect = clean(userYomikata) === clean(currentWord.yomikata); // 요미카타도 둘 다 공백 제거
-  
-    const isCorrect = meaningCorrect && yomikataCorrect; // 둘 다 맞아야 true
-  
+      .map(item => clean(item)); // 공백 제거
+    
+    const meaningCorrect = correctMeanings.includes(clean(userMeaning));
+    // const yomikataCorrect = clean(userYomikata) === clean(currentWord.yomikata);
+    // const isCorrect = meaningCorrect && yomikataCorrect;
+
     const newRecord: AnswerRecord = {
       kanji: currentWord.kanji,
       yomikata: currentWord.yomikata,
       correctMeaning: currentWord.meaning,
-      userMeaning: userMeaning.trim(), // 기록은 원본 사용
+      userMeaning: userMeaning.trim(),
       userYomikata: userYomikata.trim(),
-      isCorrect,
+      isCorrect: meaningCorrect,
     };
-  
+
     const newAnswers = [...answers, newRecord];
-  
-    if (currentIndex + 1 < wordList.length) {
+
+    if (currentIndex + 1 < shuffledWordList.length) {
       setAnswers(newAnswers);
-      setCurrentIndex(prev => prev + 1);
+      setCurrentIndex((prev) => prev + 1);
       setUserMeaning('');
       setUserYomikata('');
     } else {
       navigate(`/result/${chapter}/${subcategory}`, {
-        state: { answers: newAnswers }
+        state: { answers: newAnswers },
       });
     }
   };
-  
   
 
   const handlePrevious = () => {
@@ -136,7 +148,7 @@ export default function TestPage() {
     }
   };
 
-  if (!wordList.length) {
+  if (!shuffledWordList.length) {
     return <Container>문제가 없습니다.</Container>;
   }
 
@@ -145,14 +157,14 @@ export default function TestPage() {
       <h1>{chapter} {subcategory} 테스트</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
 
-      <div>
+      {/* <div>
         <Input
           type="text"
           value={userYomikata}
           placeholder="요미카타 입력"
           onChange={(e) => setUserYomikata(e.target.value)}
         />
-      </div>
+      </div> */}
       <div>
         <Input
           type="text"
@@ -177,7 +189,7 @@ export default function TestPage() {
         </BackButton>
       </SingleButtonRow>
 
-      <p>{currentIndex + 1} / {wordList.length} 문제</p>
+      <p>{currentIndex + 1} / {shuffledWordList.length} 문제</p>
     </Container>
   );
 }
