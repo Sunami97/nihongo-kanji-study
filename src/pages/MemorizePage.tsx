@@ -4,6 +4,7 @@ import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
 import styled from 'styled-components';
 import { KanjiWord } from '@/data/kanjiData';
+import { shuffleArray } from '@/utils/shuffleArray';
 
 const Container = styled.div`
   padding: 4rem 2rem;
@@ -80,8 +81,10 @@ export default function MemorizePage() {
   const navigate = useNavigate();
   const [isAllOpen, setIsAllOpen] = useState(false);
 
-  const kanjiList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory] ? kanjiData[chapter][subcategory] : [];
-
+  const kanjiList: KanjiWord[] = chapter && subcategory && kanjiData[chapter]?.[subcategory]
+  ? shuffleArray(kanjiData[chapter][subcategory])
+  : [];
+  
   useEffect(() => {
     if (!chapter) {
       navigate('/'); // chapter 없으면 홈으로
@@ -90,6 +93,8 @@ export default function MemorizePage() {
     }
 
   }, [chapter, subcategory, navigate]);
+
+  
   
   const handleStartTest = () => {
     if (chapter && subcategory) {
