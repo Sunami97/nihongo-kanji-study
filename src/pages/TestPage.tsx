@@ -22,10 +22,11 @@ const KanjiText = styled.h2`
 `;
 const YomikataBox = styled.div`
   width: 300px;
-  height: 3rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1.5rem;
 `;
 
 const YomikataButtonBox = styled.div`
@@ -54,7 +55,6 @@ const ButtonRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
 `;
 
 const SingleButtonRow = styled.div`
@@ -94,7 +94,7 @@ const BackButton = styled.button`
 const OutlineButton = styled.button`
   padding: 0.5rem 1.2rem;
   font-size: 0.9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   background-color: transparent;
   border: 2px solid #4caf50;
   color: #4caf50;
@@ -208,11 +208,6 @@ export default function TestPage() {
           {showYomikata && currentWord.yomikata}
         </YomikataText>
       </YomikataBox>
-      <YomikataButtonBox>
-        <OutlineButton onClick={() => setShowYomikata(prev => !prev)}>
-          발음
-        </OutlineButton>
-      </YomikataButtonBox>
       {/* <div>
         <Input
           type="text"
@@ -235,7 +230,11 @@ export default function TestPage() {
           }}
         />
       </div>
-
+      <YomikataButtonBox>
+        <OutlineButton onClick={() => setShowYomikata(prev => !prev)}>
+          발음
+        </OutlineButton>
+      </YomikataButtonBox>
       <ButtonRow>
         <Button onClick={handlePrevious} disabled={currentIndex === 0}>
           이전
