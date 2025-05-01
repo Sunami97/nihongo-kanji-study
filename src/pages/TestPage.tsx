@@ -6,14 +6,39 @@ import { AnswerRecord } from '@/types/kanji.types';
 import { shuffleArray } from '@/utils/shuffleArray';
 
 const Container = styled.div`
+ min-width: 300px;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const KanjiText = styled.h2`
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+`;
+const YomikataBox = styled.div`
+  width: 300px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const YomikataButtonBox = styled.div`
+  width: 300px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+`;
+
+const YomikataText = styled.h3`
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
 `;
 
 const Input = styled.input`
@@ -60,14 +85,27 @@ const BackButton = styled.button`
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-
+  
   &:hover {
     background-color: #757575;
   }
 `;
 
+const OutlineButton = styled.button`
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+`;
+
 export default function TestPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
+  const [showYomikata, setShowYomikata] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -131,6 +169,7 @@ export default function TestPage() {
       setCurrentIndex((prev) => prev + 1);
       setUserMeaning('');
       setUserYomikata('');
+      setShowYomikata(false);
       setTimeout(focusMeaningInput, 0);
     } else {
       navigate(`/result/${chapter}/${subcategory}`, {
@@ -145,6 +184,7 @@ export default function TestPage() {
       setCurrentIndex(prev => prev - 1);
       setUserMeaning('');
       setUserYomikata('');
+      setShowYomikata(false);
       setTimeout(focusMeaningInput, 0);
     }
   };
@@ -163,7 +203,16 @@ export default function TestPage() {
     <Container>
       <h1>{chapter} {subcategory} 테스트</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
-
+      <YomikataBox>
+        <YomikataText>
+          {showYomikata && currentWord.yomikata}
+        </YomikataText>
+      </YomikataBox>
+      <YomikataButtonBox>
+        <OutlineButton onClick={() => setShowYomikata(prev => !prev)}>
+          발음
+        </OutlineButton>
+      </YomikataButtonBox>
       {/* <div>
         <Input
           type="text"
