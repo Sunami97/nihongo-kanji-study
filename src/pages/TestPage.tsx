@@ -108,7 +108,7 @@ const OutlineButton = styled.button`
   margin-bottom: 1.5rem;
   background-color: transparent;
   border: 2px solid ${({ theme }) => theme.alt};
-  color: ${({ theme }) => theme.cardBorder};
+  color: ${({ theme }) => theme.primary};
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
