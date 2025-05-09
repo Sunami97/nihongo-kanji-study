@@ -32,8 +32,8 @@ export const darkTheme = {
   secondaryHover: '#424242',
 
   cardBg: '#2c2c40',
-  cardBorder: '#ab47bc',
-  cardBorderHover: '#8e24aa',
+  cardBorder: '#ba68c8',
+  cardBorderHover: '#ba68c8',
   cardHoverBg: '#392f4d',
   cardText: '#ffffff',
   cardDetailText: '#dddddd',
