@@ -10,7 +10,7 @@ export const lightTheme = {
   cardBg: '#fce4ec',
   cardBorder: '#f06292',
   cardBorderHover: '#ec407a',
-  cardHoverBg: '#f8bbd0',
+  cardHoverBg: '#fde4ec',
   cardText: '#333333',
   cardDetailText: '#555555',
   cardShadow: 'rgba(0, 0, 0, 0.1)',
