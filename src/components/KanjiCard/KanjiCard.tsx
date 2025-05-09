@@ -1,6 +1,7 @@
+/** @jsxImportSource @emotion/react */
 import { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
 import { KanjiWord } from '@/data/kanjiData';
-import styled from 'styled-components';
 
 interface KanjiCardProps {
   word: KanjiWord;
@@ -9,14 +10,15 @@ interface KanjiCardProps {
 
 const Card = styled.div<{ isOpen: boolean }>`
   width: 200px;
-  background-color: ${(props) => (props.isOpen ? '#e8f5e9' : 'white')};
-  border: 2px solid ${(props) => (props.isOpen ? '#388e3c' : '#4caf50')};
+  background-color: ${({ theme, isOpen }) => (isOpen ? theme.cardBg : theme.background)};
+  border: 2px solid ${({ theme, isOpen }) => (isOpen ? theme.cardBorder : theme.primary)};
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
   transition: border-color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
-  box-shadow: ${(props) => (props.isOpen ? '0 8px 20px rgba(0, 0, 0, 0.3)' : '0 2px 6px rgba(0, 0, 0, 0.1)')};
+  box-shadow: ${({ theme, isOpen }) =>
+    isOpen ? `0 8px 20px ${theme.cardShadow}` : `0 2px 6px ${theme.cardShadow}`};
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -24,7 +26,8 @@ const Card = styled.div<{ isOpen: boolean }>`
   justify-content: flex-start;
 
   &:hover {
-    background-color: #f1f8e9;
+    background-color: ${({ theme }) => theme.cardHoverBg};
+    border-color: ${({ theme }) => theme.cardBorderHover};
     transform: translateY(-3px);
   }
 `;
@@ -33,21 +36,20 @@ const KanjiText = styled.h2`
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-  color: #333;
+  color: ${({ theme }) => theme.cardText};
 `;
 
 const DetailWrapper = styled.div<{ isOpen: boolean }>`
-  max-height: ${(props) => (props.isOpen ? '500px' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '500px' : '0')};
   overflow: hidden;
-  opacity: ${(props) => (props.isOpen ? '1' : '0')};
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   width: 100%;
-  margin-top: ${(props) => (props.isOpen ? '1rem' : '0')};
+  margin-top: ${({ isOpen }) => (isOpen ? '1rem' : '0')};
 `;
-
 
 const Detail = styled.div`
   font-size: 1rem;
-  color: #555;
+  color: ${({ theme }) => theme.cardDetailText};
   font-weight: 500;
   word-break: keep-all;
 `;
@@ -66,7 +68,6 @@ export default function KanjiCard({ word, defaultOpen = false }: KanjiCardProps)
   return (
     <Card isOpen={open} onClick={toggleOpen}>
       <KanjiText>{word.kanji}</KanjiText>
-
       <DetailWrapper isOpen={open}>
         <Detail>
           <div>{word.yomikata}</div>

@@ -1,24 +1,27 @@
+/** @jsxImportSource @emotion/react */
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
-import styled from 'styled-components';
 import { KanjiWord } from '@/data/kanjiData';
 import { shuffleArray } from '@/utils/shuffleArray';
 import { FaShuffle } from "react-icons/fa6";
+import styled from '@emotion/styled';
 
 const Container = styled.div`
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  background-color: ${({ theme }) => theme.background};  
+  color: ${({ theme }) => theme.text};                
+  min-height: 100vh;
 `;
 
 const Title = styled.h1`
   font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 3rem;
-  color: #333;
 `;
 
 const ButtonWrapper = styled.div`
@@ -37,23 +40,22 @@ const CardsWrapper = styled.div`
   gap: 2rem;
 `;
 
-
 const Button = styled.button`
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #66bb6a, #43a047);
-  color: white;
+  background: ${({ theme }) => theme.alt};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 12px;
   font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: linear-gradient(135deg, #43a047, #2e7d32);
+    background: ${({ theme }) => theme.altHover};
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   }
 `;
 
@@ -77,6 +79,7 @@ const BackButton = styled.button`
   }
 `;
 
+
 export default function MemorizePage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
@@ -91,15 +94,12 @@ export default function MemorizePage() {
 
   useEffect(() => {
     if (!chapter) {
-      navigate('/'); // chapter 없으면 홈으로
+      navigate('/');
     } else if (!subcategory) {
-      navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
+      navigate(`/sub-category/${chapter}`);
     }
-
   }, [chapter, subcategory, navigate]);
 
-  
-  
   const handleStartTest = () => {
     if (chapter && subcategory) {
       navigate(`/test/${chapter}/${subcategory}`);
@@ -111,7 +111,6 @@ export default function MemorizePage() {
       setKanjiList(shuffleArray(kanjiData[chapter][subcategory]));
     }
   };
-
 
   const handleToggleAll = () => {
     setIsAllOpen(prev => !prev);
@@ -125,11 +124,8 @@ export default function MemorizePage() {
 
   return (
     <Container>
-      
       <BackButtonWrapper>
-        <BackButton onClick={handleGoBackToYearSelect}>
-          돌아가기
-        </BackButton>
+        <BackButton onClick={handleGoBackToYearSelect}>돌아가기</BackButton>
       </BackButtonWrapper>
 
       <Title>{chapter} - {subcategory} 한자 암기</Title>
@@ -140,9 +136,7 @@ export default function MemorizePage() {
           <Button onClick={handleToggleAll}>
             {isAllOpen ? '접기' : '펼치기'}
           </Button>
-          <Button onClick={handleStartTest}>
-            테스트 시작하기
-          </Button>
+          <Button onClick={handleStartTest}>테스트 시작하기</Button>
         </ButtonWrapper>
       )}
 

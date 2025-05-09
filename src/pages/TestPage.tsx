@@ -1,14 +1,17 @@
+/** @jsxImportSource @emotion/react */
 import { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import styled from '@emotion/styled';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
-import styled from 'styled-components';
-import { AnswerRecord } from '@/types/kanji.types';
 import { shuffleArray } from '@/utils/shuffleArray';
+import { AnswerRecord } from '@/types/kanji.types';
 
 const Container = styled.div`
- min-width: 300px;
+  min-width: 300px;
   padding: 2rem;
   text-align: center;
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +23,7 @@ const KanjiText = styled.h2`
   font-weight: 400;
   margin-bottom: 0.5rem;
 `;
+
 const YomikataBox = styled.div`
   width: 300px;
   height: 2rem;
@@ -39,7 +43,7 @@ const YomikataButtonBox = styled.div`
 const YomikataText = styled.h3`
   font-size: 1.2rem;
   font-weight: 400;
-  color: #555;
+  color: ${({ theme }) => theme.cardDetailText};
 `;
 
 const Input = styled.input`
@@ -65,29 +69,36 @@ const SingleButtonRow = styled.div`
 
 const Button = styled.button`
   padding: 0.8rem 2rem;
-  background-color: #4caf50;
-  color: white;
+  background-color: ${({ theme }) => theme.alt};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: #45a049;
+    background-color: ${({ theme }) => theme.altHover};
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
 const BackButton = styled.button`
   padding: 0.8rem 2rem;
-  background-color: #9e9e9e;
-  color: white;
+  background-color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  
+  transition: background-color 0.3s;
+
   &:hover {
-    background-color: #757575;
+    background-color: ${({ theme }) => theme.secondaryHover};
   }
 `;
 
@@ -96,17 +107,22 @@ const OutlineButton = styled.button`
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   background-color: transparent;
-  border: 2px solid #4caf50;
-  color: #4caf50;
+  border: 2px solid ${({ theme }) => theme.alt};
+  color: ${({ theme }) => theme.cardBorder};
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.altHover};
+    color: ${({ theme }) => theme.buttonText};
+  }
 `;
 
 export default function TestPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
-  const [showYomikata, setShowYomikata] = useState(false);
   const navigate = useNavigate();
+  const [showYomikata, setShowYomikata] = useState(false);
 
   useEffect(() => {
     if (!chapter) {
@@ -116,7 +132,6 @@ export default function TestPage() {
     }
   }, [chapter, subcategory, navigate]);
 
-  //처음 한 번만 랜덤 섞기
   const [shuffledWordList] = useState<KanjiWord[]>(() => {
     if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
       return shuffleArray(kanjiData[chapter][subcategory]);
@@ -139,19 +154,15 @@ export default function TestPage() {
   const handleCheckAnswer = () => {
     if (!currentWord) return;
 
-    const clean = (text: string) =>
-      text.replace(/\s/g, ''); // 공백 제거
-
+    const clean = (text: string) => text.replace(/\s/g, '');
     const removeParentheses = (text: string): string =>
-      text.replace(/\([^)]*\)/g, ''); // 괄호와 그 안 내용 제거
+      text.replace(/\([^)]*\)/g, '');
 
-    const correctMeanings = removeParentheses(currentWord.meaning) // 괄호 제거
+    const correctMeanings = removeParentheses(currentWord.meaning)
       .split(',')
-      .map(item => clean(item)); // 공백 제거
+      .map((item) => clean(item));
 
     const meaningCorrect = correctMeanings.includes(clean(userMeaning));
-    // const yomikataCorrect = clean(userYomikata) === clean(currentWord.yomikata);
-    // const isCorrect = meaningCorrect && yomikataCorrect;
 
     const newRecord: AnswerRecord = {
       kanji: currentWord.kanji,
@@ -178,10 +189,9 @@ export default function TestPage() {
     }
   };
 
-
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
+      setCurrentIndex((prev) => prev - 1);
       setUserMeaning('');
       setUserYomikata('');
       setShowYomikata(false);
@@ -208,14 +218,7 @@ export default function TestPage() {
           {showYomikata && currentWord.yomikata}
         </YomikataText>
       </YomikataBox>
-      {/* <div>
-        <Input
-          type="text"
-          value={userYomikata}
-          placeholder="요미카타 입력"
-          onChange={(e) => setUserYomikata(e.target.value)}
-        />
-      </div> */}
+
       <div>
         <Input
           type="text"
@@ -230,24 +233,20 @@ export default function TestPage() {
           }}
         />
       </div>
+
       <YomikataButtonBox>
-        <OutlineButton onClick={() => setShowYomikata(prev => !prev)}>
+        <OutlineButton onClick={() => setShowYomikata((prev) => !prev)}>
           발음
         </OutlineButton>
       </YomikataButtonBox>
+
       <ButtonRow>
-        <Button onClick={handlePrevious} disabled={currentIndex === 0}>
-          이전
-        </Button>
-        <Button onClick={handleCheckAnswer}>
-          다음
-        </Button>
+        <Button onClick={handlePrevious} disabled={currentIndex === 0}>이전</Button>
+        <Button onClick={handleCheckAnswer}>다음</Button>
       </ButtonRow>
 
       <SingleButtonRow>
-        <BackButton onClick={handleGoBackToMemorize}>
-          돌아가기
-        </BackButton>
+        <BackButton onClick={handleGoBackToMemorize}>돌아가기</BackButton>
       </SingleButtonRow>
 
       <p>{currentIndex + 1} / {shuffledWordList.length} 문제</p>

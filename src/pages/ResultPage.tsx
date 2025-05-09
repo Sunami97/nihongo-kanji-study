@@ -1,10 +1,23 @@
+/** @jsxImportSource @emotion/react */
 import { useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+
+interface AnswerRecord {
+  kanji: string;
+  yomikata: string;
+  correctMeaning: string;
+  userMeaning: string;
+  userYomikata: string;
+  isCorrect: boolean;
+}
 
 const Container = styled.div`
   padding: 2rem;
   text-align: center;
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+  min-height: 100vh;
 `;
 
 const Section = styled.div`
@@ -12,8 +25,8 @@ const Section = styled.div`
 `;
 
 const Title = styled.h2`
+  color: ${({ theme }) => theme.text};
   margin-bottom: 1rem;
-  color: #333;
 `;
 
 const List = styled.ul`
@@ -24,8 +37,9 @@ const List = styled.ul`
 const Item = styled.li<{ isCorrect: boolean }>`
   margin: 1rem 0;
   padding-bottom: 1rem;
-  color: ${(props) => (props.isCorrect ? '#4caf50' : '#f44336')};
-  border-bottom: 1px solid #ddd; /* 🔥 구분선 추가 */
+  color: ${({ theme, isCorrect }) =>
+    isCorrect ? theme.success : theme.error};
+  border-bottom: 1px solid ${({ theme }) => theme.border};
   text-align: center;
   word-break: keep-all;
 `;
@@ -39,54 +53,46 @@ const ButtonWrapper = styled.div`
 
 const Button = styled.button`
   padding: 1rem 2rem;
-  background-color: #4caf50;
-  color: white;
+  background-color: ${({ theme }) => theme.alt};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: #388e3c;
+    background-color: ${({ theme }) => theme.altHover};
   }
 `;
 
 const BackButton = styled.button`
   padding: 0.8rem 2rem;
-  background-color: #9e9e9e;
-  color: white;
+  background-color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: #757575;
+    background-color: ${({ theme }) => theme.secondaryHover};
   }
 `;
-
-interface AnswerRecord {
-  kanji: string;
-  yomikata: string;
-  correctMeaning: string;
-  userMeaning: string;
-  userYomikata: string;
-  isCorrect: boolean;
-}
 
 export default function ResultPage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   const location = useLocation();
 
-    useEffect(() => {
-      if (!chapter) {
-        navigate('/'); // chapter 없으면 홈으로
-      } else if (!subcategory) {
-        navigate(`/sub-category/${chapter}`); // chapter는 있는데 subcategory 없으면 sub-category로
-      }
-  
-    }, [chapter, subcategory, navigate]);
+  useEffect(() => {
+    if (!chapter) {
+      navigate('/');
+    } else if (!subcategory) {
+      navigate(`/sub-category/${chapter}`);
+    }
+  }, [chapter, subcategory, navigate]);
 
   const { answers } = location.state as { answers: AnswerRecord[] };
 
@@ -123,9 +129,9 @@ export default function ResultPage() {
         <List>
           {wrongAnswers.map((answer, idx) => (
             <Item key={idx} isCorrect={false}>
-              {answer.kanji}({answer.yomikata})<br />
+              {answer.kanji} ({answer.yomikata})<br />
               정답 - {answer.correctMeaning}<br />
-              내 답 - {answer.userMeaning}<br />
+              내 답 - {answer.userMeaning}
             </Item>
           ))}
         </List>
@@ -133,7 +139,7 @@ export default function ResultPage() {
 
       <ButtonWrapper>
         <Button onClick={handleRetry}>다시 풀기</Button>
-        <BackButton onClick={handleGoMemorize}>돌아가기기</BackButton>
+        <BackButton onClick={handleGoMemorize}>돌아가기</BackButton>
       </ButtonWrapper>
     </Container>
   );

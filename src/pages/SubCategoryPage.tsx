@@ -1,18 +1,26 @@
+/** @jsxImportSource @emotion/react */
 import { useParams, useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
+
+interface SubCategory {
+  name: string;
+  words: KanjiWord[];
+}
 
 const Container = styled.div`
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+  min-height: 100vh;
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 3rem;
 `;
 
@@ -24,19 +32,18 @@ const ButtonWrapper = styled.div`
 `;
 
 const SubCategoryButton = styled.button`
-  margin: 0.5rem;
-  padding: 1rem 2rem;
-  background-color: #4caf50;
-  color: white;
+  background-color: ${({ theme }) => theme.alt};
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #45a049;
+    background-color: ${({ theme }) => theme.altHover};
   }
 `;
 
@@ -48,33 +55,26 @@ const BackButtonWrapper = styled.div`
 
 const BackButton = styled.button`
   padding: 0.8rem 2rem;
-  background-color: #9e9e9e;
-  color: white;
+  background-color: ${({ theme }) => theme.secondary};        // ✅ 보조색
+  color: ${({ theme }) => theme.buttonText};
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: #757575;
+    background-color: ${({ theme }) => theme.secondaryHover}; // ✅ hover도 보조색
   }
 `;
-
-interface SubCategory {
-  name: string;
-  words: KanjiWord[];
-}
 
 export default function SubCategoryPage() {
   const { chapter } = useParams<{ chapter: string }>();
   const navigate = useNavigate();
 
   const subCategoryList: SubCategory[] = chapter && kanjiData[chapter]
-  ? Object.entries(kanjiData[chapter]).map(([name, words]) => ({
-      name,
-      words,
-    }))
-  : [];
+    ? Object.entries(kanjiData[chapter]).map(([name, words]) => ({ name, words }))
+    : [];
 
   const handleSelectSubCategory = (subcategory: string) => {
     navigate(`/memorize/${chapter}/${subcategory}`);
@@ -87,9 +87,7 @@ export default function SubCategoryPage() {
   return (
     <Container>
       <BackButtonWrapper>
-        <BackButton onClick={handleGoBackToCategory}>
-          돌아가기
-        </BackButton>
+        <BackButton onClick={handleGoBackToCategory}>돌아가기</BackButton>
       </BackButtonWrapper>
 
       <Title>{chapter} 선택</Title>
