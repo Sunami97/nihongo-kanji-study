@@ -7,7 +7,7 @@ export const lightTheme = {
   secondary: '#9e9e9e',
   secondaryHover: '#757575',
 
-  cardBg: '#white',
+  cardBg: '#e8f5e9',
   cardBorder: '#4caf50',
   cardHoverBg: '#e8f5e9',
   cardBorderHover: '#388e3c',
