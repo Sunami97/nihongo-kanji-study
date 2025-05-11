@@ -21,34 +21,58 @@ const Container = styled.div`
 `;
 
 const Section = styled.div`
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 `;
 
 const Title = styled.h2`
   color: ${({ theme }) => theme.text};
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 `;
 
 const List = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
 `;
 
 const Item = styled.li<{ isCorrect: boolean }>`
-  margin: 1rem 0;
-  padding-bottom: 1rem;
-  color: ${({ theme, isCorrect }) =>
+  width: 90%;
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  border-left: 6px solid ${({ theme, isCorrect }) =>
     isCorrect ? theme.success : theme.error};
-  border-bottom: 1px solid ${({ theme }) => theme.border};
-  text-align: center;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.cardBg};
+  color: ${({ theme }) => theme.text};
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
   word-break: keep-all;
+  transition: all 0.3s;
+`;
+
+const AnswerBlock = styled.div`
+  font-size: 1rem;
+  line-height: 1.6;
+`;
+
+const Label = styled.span`
+  font-weight: bold;
+  display: inline-block;
+  min-width: 4rem;
+  color: ${({ theme }) => theme.cardDetailText};
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 `;
 
 const Button = styled.button`
@@ -118,7 +142,10 @@ export default function ResultPage() {
         <List>
           {correctAnswers.map((answer, idx) => (
             <Item key={idx} isCorrect={true}>
-              {answer.kanji} ({answer.yomikata}) - {answer.correctMeaning}
+              <AnswerBlock>
+                <Label>한자</Label> {answer.kanji} ({answer.yomikata})<br />
+                <Label>뜻</Label> {answer.correctMeaning}
+              </AnswerBlock>
             </Item>
           ))}
         </List>
@@ -129,9 +156,11 @@ export default function ResultPage() {
         <List>
           {wrongAnswers.map((answer, idx) => (
             <Item key={idx} isCorrect={false}>
-              {answer.kanji} ({answer.yomikata})<br />
-              정답 - {answer.correctMeaning}<br />
-              내 답 - {answer.userMeaning}
+              <AnswerBlock>
+                <Label>한자</Label> {answer.kanji} ({answer.yomikata})<br />
+                <Label>정답</Label> {answer.correctMeaning}<br />
+                <Label>내 답</Label> {answer.userMeaning || '미입력'}
+              </AnswerBlock>
             </Item>
           ))}
         </List>
