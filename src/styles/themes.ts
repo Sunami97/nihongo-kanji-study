@@ -6,17 +6,10 @@ export const lightTheme = {
   buttonText: '#ffffff',
   secondary: '#9e9e9e',
   secondaryHover: '#757575',
-
-  //cardBg: '#e8f5e9',
-  cardBg: '#e4fbff',
-
-  //cardBorder: '#4caf50',
+  
+  cardBg: '#ffffff',
   cardBorder: '#87CEEB',
-
-  //cardHoverBg: '#e8f5e9',
   cardHoverBg: '#e4fbff',
-
-  //cardBorderHover: '#388e3c',
   cardBorderHover: '#87CEEB',
 
   cardText: '#333333',
@@ -39,7 +32,7 @@ export const darkTheme = {
   secondary: '#616161',
   secondaryHover: '#424242',
 
-  cardBg: '#2c2c40',
+  cardBg: '#121212',
   cardBorder: '#ba68c8',
   cardBorderHover: '#ba68c8',
   cardHoverBg: '#392f4d',
