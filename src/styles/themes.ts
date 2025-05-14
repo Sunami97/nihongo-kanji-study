@@ -7,10 +7,18 @@ export const lightTheme = {
   secondary: '#9e9e9e',
   secondaryHover: '#757575',
 
-  cardBg: '#e8f5e9',
-  cardBorder: '#4caf50',
-  cardHoverBg: '#e8f5e9',
-  cardBorderHover: '#388e3c',
+  //cardBg: '#e8f5e9',
+  cardBg: '#e4fbff',
+
+  //cardBorder: '#4caf50',
+  cardBorder: '#87CEEB',
+
+  //cardHoverBg: '#e8f5e9',
+  cardHoverBg: '#e4fbff',
+
+  //cardBorderHover: '#388e3c',
+  cardBorderHover: '#87CEEB',
+
   cardText: '#333333',
   cardDetailText: '#555555',
   cardShadow: 'rgba(0, 0, 0, 0.1)',
