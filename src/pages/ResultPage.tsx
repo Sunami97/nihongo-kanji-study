@@ -46,7 +46,7 @@ const Item = styled.li<{ isCorrect: boolean }>`
   border-left: 6px solid ${({ theme, isCorrect }) =>
     isCorrect ? theme.success : theme.error};
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.cardBg};
+  background-color: ${({ theme }) => theme.resultCardBg};
   color: ${({ theme }) => theme.text};
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: left;

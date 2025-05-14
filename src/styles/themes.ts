@@ -16,6 +16,7 @@ export const lightTheme = {
   cardDetailText: '#555555',
   cardShadow: 'rgba(0, 0, 0, 0.1)',
 
+  resultCardBg: '#ffffff',
   success: '#4caf50',
   error: '#f44336',
   border: '#ddd',
@@ -40,6 +41,7 @@ export const darkTheme = {
   cardDetailText: '#dddddd',
   cardShadow: 'rgba(0, 0, 0, 0.3)',
 
+  resultCardBg: '#392f4d',
   success: '#81c784',
   error: '#ef5350',
   border: '#444',
