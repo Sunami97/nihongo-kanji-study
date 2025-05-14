@@ -38,6 +38,7 @@ const CardsWrapper = styled.div`
   justify-content: center;
   align-items: flex-start; 
   gap: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Button = styled.button`
