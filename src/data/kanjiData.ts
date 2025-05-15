@@ -465,7 +465,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '昇る', yomikata: 'のぼる', meaning: '떠오르다' },
       { kanji: '等しい', yomikata: 'ひとしい', meaning: '같다, 동등하다' }
     ],
-     ' 2021': [
+    ' 2021': [
       { kanji: '永久', yomikata: 'えいきゅう', meaning: '영구, 영원' },
       { kanji: '弱点', yomikata: 'じゃくてん', meaning: '약점' },
       { kanji: '返品', yomikata: 'へんぴん', meaning: '반품' },
@@ -504,7 +504,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '系統', yomikata: 'けいとう', meaning: '계통' },
       { kanji: '束ねる', yomikata: 'たばねる', meaning: '묶다, 통솔하다' },
       { kanji: '迎え', yomikata: 'むかえ', meaning: '맞이, 마중' },
-       { kanji: '警備', yomikata: 'けいび', meaning: '경비' },
+      { kanji: '警備', yomikata: 'けいび', meaning: '경비' },
       { kanji: '省く', yomikata: 'はぶく', meaning: '줄이다, 생략하다' },
       { kanji: '養う', yomikata: 'やしなう', meaning: '기르다, 양육하다' }
     ],
@@ -531,6 +531,80 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '焦げる', yomikata: 'こげる', meaning: '타다, 눋다' },
       { kanji: '症状', yomikata: 'しょうじょう', meaning: '증상, 증세' },
       { kanji: '招く', yomikata: 'まねく', meaning: '초대하다, 부르다, 초래하다' }
+    ]
+  },
+  'chapter5': {
+    ' 2015': [
+      { kanji: '鮮やか', yomikata: 'あざやか', meaning: '선명함, 또렷함' },
+      { kanji: '驚かせる', yomikata: 'おどろかせる', meaning: '놀래키다' },
+      { kanji: '混乱', yomikata: 'こんらん', meaning: '혼란' },
+      { kanji: '恵まれる', yomikata: 'めぐまれる', meaning: '(좋은 환경) 혜택을 받다, 풍족함을 누리다' },
+      { kanji: '争う', yomikata: 'あらそう', meaning: '다투다' },
+      { kanji: '距離', yomikata: 'きょり', meaning: '거리' },
+      { kanji: '指摘', yomikata: 'してき', meaning: '지적' },
+      { kanji: '腕', yomikata: 'うで', meaning: '팔' },
+      { kanji: '講師', yomikata: 'こうし', meaning: '강사' },
+      { kanji: '順調', yomikata: 'じゅんちょう', meaning: '순조로움' }
+    ],
+    ' 2014': [
+      { kanji: '援助', yomikata: 'えんじょ', meaning: '원조, 도움' },
+      { kanji: '逆らう', yomikata: 'さからう', meaning: '거스르다, 거역하다' },
+      { kanji: '批判', yomikata: 'ひはん', meaning: '비판' },
+      { kanji: '破れる', yomikata: 'やぶれる', meaning: '(봉투) 찢어지다, 터지다' },
+      { kanji: '劣る', yomikata: 'おとる', meaning: '뒤떨어지다' },
+      { kanji: '湿っぽい', yomikata: 'しめっぽい', meaning: '축축하다' },
+      { kanji: '拾う', yomikata: 'ひろう', meaning: '줍다' },
+      { kanji: '詳しい', yomikata: 'くわしい', meaning: '자세하다' },
+      { kanji: '接続', yomikata: 'せつぞく', meaning: '접속' },
+      { kanji: '面倒', yomikata: 'めんどう', meaning: '귀찮음, 번거로움' }
+    ],
+    ' 2013': [
+      { kanji: '傾く', yomikata: 'かたむく', meaning: '치우치다, 기울다' },
+      { kanji: '講義', yomikata: 'こうぎ', meaning: '강의' },
+      { kanji: '責める', yomikata: 'せめる', meaning: '탓하다, 책망하다' },
+      { kanji: '果たす', yomikata: 'はたす', meaning: '(역할, 임무) 완수하다' },
+      { kanji: '寄付', yomikata: 'きふ', meaning: '기부' },
+      { kanji: '招待', yomikata: 'しょうたい', meaning: '초대' },
+      { kanji: '即座に', yomikata: 'そくざに', meaning: '즉각, 당장' },
+      { kanji: '削る', yomikata: 'けずる', meaning: '깎다, 삭감하다' },
+      { kanji: '真剣', yomikata: 'しんけん', meaning: '진지함' },
+      { kanji: '努める', yomikata: 'つとめる', meaning: '노력하다, 힘쓰다' }
+    ],
+    ' 2012': [
+      { kanji: '扱う', yomikata: 'あつかう', meaning: '다루다, 취급하다' },
+      { kanji: '訪れる', yomikata: 'おとずれる', meaning: '방문하다, (시기가) 찾아오다' },
+      { kanji: '積極的', yomikata: 'せっきょくてき', meaning: '적극적' },
+      { kanji: '導く', yomikata: 'みちびく', meaning: '인도하다' },
+      { kanji: '勢い', yomikata: 'いきおい', meaning: '기세, 힘' },
+      { kanji: '肩', yomikata: 'かた', meaning: '어깨' },
+      { kanji: '組織', yomikata: 'そしき', meaning: '조직' },
+      { kanji: '至る', yomikata: 'いたる', meaning: '(~에) 이르다' },
+      { kanji: '収穫', yomikata: 'しゅうかく', meaning: '수확' },
+      { kanji: '抵抗', yomikata: 'ていこう', meaning: '저항' }
+    ],
+    ' 2011': [
+      { kanji: '与える', yomikata: 'あたえる', meaning: '주다' },
+      { kanji: '象徴', yomikata: 'しょうちょう', meaning: '상징' },
+      { kanji: '討論', yomikata: 'とうろん', meaning: '토론' },
+      { kanji: '変更', yomikata: 'へんこう', meaning: '변경' },
+      { kanji: '管理', yomikata: 'かんり', meaning: '관리' },
+      { kanji: '属する', yomikata: 'ぞくする', meaning: '(단체에) 속하다, 소속하다' },
+      { kanji: '激しい', yomikata: 'はげしい', meaning: '격하다, 심하다' },
+      { kanji: '誘う', yomikata: 'さそう', meaning: '(같이 하길) 권하다' },
+      { kanji: '登録', yomikata: 'とうろく', meaning: '등록' },
+      { kanji: '福祉', yomikata: 'ふくし', meaning: '복지' }
+    ],
+    ' 2010': [
+      { kanji: '焦る', yomikata: 'あせる', meaning: '초조해하다' },
+      { kanji: '暮らす', yomikata: 'くらす', meaning: '살다, 생활하다' },
+      { kanji: '頼る', yomikata: 'たよる', meaning: '의지하다' },
+      { kanji: '礼儀', yomikata: 'れいぎ', meaning: '예의' },
+      { kanji: '運賃', yomikata: 'うんちん', meaning: '운임' },
+      { kanji: '撮影', yomikata: 'さつえい', meaning: '촬영' },
+      { kanji: '伝統', yomikata: 'でんとう', meaning: '전통' },
+      { kanji: '開催', yomikata: 'かいさい', meaning: '개최' },
+      { kanji: '出世', yomikata: 'しゅっせ', meaning: '출세' },
+      { kanji: '乱れる', yomikata: 'みだれる', meaning: '흐트러지W다' }
     ]
   },
 };
