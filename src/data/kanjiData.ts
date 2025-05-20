@@ -651,7 +651,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: "関係", yomikata: "かんけい", meaning: "관계" },
       { kanji: "関心", yomikata: "かんしん", meaning: "관심" },
       { kanji: "観測", yomikata: "かんそく", meaning: "관측" },
-      { kanji: "岸", yomikata: "きし", meaning: "바위, 절벽, 바랑" },
+      { kanji: "岸", yomikata: "きし", meaning: "물가, 절벽, 바랑" },
       { kanji: "喫茶店", yomikata: "きっさてん", meaning: "찻집, 카페" },
       { kanji: "疑問", yomikata: "ぎもん", meaning: "의문" },
       { kanji: "牛乳", yomikata: "ぎゅうにゅう", meaning: "우유" },
