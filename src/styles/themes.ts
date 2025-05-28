@@ -22,6 +22,8 @@ export const lightTheme = {
   border: '#ddd',
   alt: '#f48fb1',        
   altHover: '#ec407a',
+
+  backgroundImage: `url('/src/assets/momoi.jpg')`
 };
 
 export const darkTheme = {
@@ -47,6 +49,7 @@ export const darkTheme = {
   border: '#444',
   alt: '#ba68c8',         
   altHover: '#ab47bc',
+  backgroundImage: `url('')`
 };
 
 export type ThemeType = typeof lightTheme;

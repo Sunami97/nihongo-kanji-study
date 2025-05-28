@@ -14,7 +14,13 @@ const Container = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;zz
+
+   background-color: ${({ theme }) => theme.background};
+  background-image: ${({ theme }) => theme.backgroundImage};
+  
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Icon = styled(PiBookOpenTextBold)`
@@ -40,6 +46,7 @@ const ButtonWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  margin-top: 9rem;
 `;
 
 const ChapterButton = styled.button`
