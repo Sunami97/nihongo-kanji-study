@@ -772,7 +772,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: "常に", yomikata: "つねに", meaning: "항상" },
       { kanji: "到着", yomikata: "とうちゃく", meaning: "도착" },
       { kanji: "道路", yomikata: "どうろ", meaning: "도로" },
-      { kanji: "通う", yomikata: "かよう", meaning: "다니다, 정들다" },
+      { kanji: "整う", yomikata: "ととのう", meaning: "갖추어지다, 정돈되다" },
       { kanji: "飛ぶ", yomikata: "とぶ", meaning: "날다" },
     ],
     "な行": [
@@ -834,12 +834,12 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     "や・ら・わ行": [
       { kanji: "辞める", yomikata: "やめる", meaning: "사임하다, 그만두다" },
       { kanji: "柔らか", yomikata: "やわらか", meaning: "부드러움, 유연함" },
+      { kanji: "油断", yomikata: "ゆだん", meaning: "방심, 부주의" },
       { kanji: "喜ぶ", yomikata: "よろこぶ", meaning: "기뻐하다, 좋아하다" },
       { kanji: "乱暴", yomikata: "らんぼう", meaning: "난폭함" },
+      { kanji: "理解", yomikata: "りかい", meaning: "이해" },
       { kanji: "輪", yomikata: "わ", meaning: "원형, 고리" },
       { kanji: "沸く", yomikata: "わく", meaning: "끓다, 뜨거워지다" },
-      { kanji: "油断", yomikata: "ゆだん", meaning: "방심, 부주의" },
-      { kanji: "理解", yomikata: "りかい", meaning: "이해" },
       { kanji: "割引", yomikata: "わりびき", meaning: "할인" }
     ],
 
