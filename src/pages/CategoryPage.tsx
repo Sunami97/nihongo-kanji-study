@@ -46,7 +46,6 @@ const ButtonWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 9rem;
 `;
 
 const ChapterButton = styled.button`
