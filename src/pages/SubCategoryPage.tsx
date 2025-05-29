@@ -18,6 +18,7 @@ const Container = styled.div`
   min-height: 100vh;
   background-color: ${({ theme }) => theme.background};
   background-image: ${({ theme }) => theme.backgroundImage2};
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 `;

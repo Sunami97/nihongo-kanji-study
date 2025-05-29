@@ -17,6 +17,7 @@ const Container = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.background};
   background-image: ${({ theme }) => theme.backgroundImage1};
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 `;
