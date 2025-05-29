@@ -10,12 +10,16 @@ interface SubCategory {
 
 const Container = styled.div`
   padding: 4rem 2rem;
-  max-width: 1000px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.text};
   min-height: 100vh;
+  background-color: ${({ theme }) => theme.background};
+  background-image: ${({ theme }) => theme.backgroundImage2};
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Title = styled.h1`

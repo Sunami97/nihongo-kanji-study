@@ -6,7 +6,7 @@ import { PiBookOpenTextBold } from 'react-icons/pi';
 
 const Container = styled.div`
   padding: 4rem 2rem;
-  max-width: 1000px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   background-color: ${({ theme }) => theme.background};
@@ -14,11 +14,9 @@ const Container = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;zz
-
-   background-color: ${({ theme }) => theme.background};
-  background-image: ${({ theme }) => theme.backgroundImage};
-  
+  align-items: center;
+  background-color: ${({ theme }) => theme.background};
+  background-image: ${({ theme }) => theme.backgroundImage1};
   background-position: center;
   background-repeat: no-repeat;
 `;

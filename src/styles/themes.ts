@@ -23,7 +23,8 @@ export const lightTheme = {
   alt: '#f48fb1',        
   altHover: '#ec407a',
 
-  backgroundImage: `url('')`
+  backgroundImage1: `url('/bg1.jpg')`,
+  backgroundImage2: `url('/bg2.jpg')`
 };
 
 export const darkTheme = {
