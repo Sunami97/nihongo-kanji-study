@@ -6,7 +6,7 @@ export const lightTheme = {
   buttonText: '#ffffff',
   secondary: '#9e9e9e',
   secondaryHover: '#757575',
-  
+
   cardBg: '#ffffff',
   cardBorder: '#87CEEB',
   cardHoverBg: '#e4fbff',
@@ -20,7 +20,7 @@ export const lightTheme = {
   success: '#4caf50',
   error: '#f44336',
   border: '#ddd',
-  alt: '#f48fb1',        
+  alt: '#f48fb1',
   altHover: '#ec407a',
 
   backgroundImage1: `url('/bg1.jpg')`,
@@ -48,9 +48,10 @@ export const darkTheme = {
   success: '#81c784',
   error: '#ef5350',
   border: '#444',
-  alt: '#ba68c8',         
+  alt: '#ba68c8',
   altHover: '#ab47bc',
-  backgroundImage: `url('')`
+  backgroundImage1: `url('/bg3.jpg')`,
+  backgroundImage2: `url('/bg4.jpg')`
 };
 
 export type ThemeType = typeof lightTheme;
