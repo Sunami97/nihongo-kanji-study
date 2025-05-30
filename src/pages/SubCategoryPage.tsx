@@ -2,6 +2,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
+import {convertChapterName} from '@/utils/convertChapterName'
 
 interface SubCategory {
   name: string;
@@ -95,7 +96,7 @@ export default function SubCategoryPage() {
         <BackButton onClick={handleGoBackToCategory}>돌아가기</BackButton>
       </BackButtonWrapper>
 
-      <Title>{chapter} 선택</Title>
+      <Title>{convertChapterName(chapter as string)} 선택</Title>
 
       <ButtonWrapper>
         {subCategoryList.map((subcategory) => (

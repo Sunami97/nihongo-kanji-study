@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from '@emotion/styled';
+import {convertChapterName} from '@/utils/convertChapterName'
 
 interface AnswerRecord {
   kanji: string;
@@ -135,7 +136,7 @@ export default function ResultPage() {
 
   return (
     <Container>
-      <h1>{chapter} {subcategory} 테스트 결과</h1>
+      <h1>{convertChapterName(chapter as string)} {subcategory} 테스트 결과</h1>
 
       <Section>
         <Title>맞은 문제 ({correctAnswers.length})</Title>

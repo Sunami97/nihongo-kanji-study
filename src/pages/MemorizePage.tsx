@@ -5,6 +5,7 @@ import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
 import { KanjiWord } from '@/data/kanjiData';
 import { shuffleArray } from '@/utils/shuffleArray';
+import {convertChapterName} from '@/utils/convertChapterName'
 import { FaShuffle } from "react-icons/fa6";
 import styled from '@emotion/styled';
 
@@ -129,7 +130,7 @@ export default function MemorizePage() {
         <BackButton onClick={handleGoBackToYearSelect}>돌아가기</BackButton>
       </BackButtonWrapper>
 
-      <Title>{chapter} - {subcategory} 한자 암기</Title>
+      <Title>{convertChapterName(chapter as string)} - {subcategory} 한자 암기</Title>
 
       {kanjiList.length > 0 && (
         <ButtonWrapper>

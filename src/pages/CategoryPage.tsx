@@ -36,7 +36,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.p`
   font-size: 1.2rem;
-  color: ${({ theme }) => theme.cardDetailText};
+  color: ${({ theme }) => theme.text};
   margin-bottom: 3rem;
 `;
 

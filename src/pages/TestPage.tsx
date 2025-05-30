@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import { kanjiData, KanjiWord } from '@/data/kanjiData';
 import { shuffleArray } from '@/utils/shuffleArray';
 import { AnswerRecord } from '@/types/kanji.types';
+import {convertChapterName} from '@/utils/convertChapterName'
 
 const Container = styled.div`
   min-width: 300px;
@@ -211,7 +212,7 @@ export default function TestPage() {
 
   return (
     <Container>
-      <h1>{chapter} {subcategory} 테스트</h1>
+      <h1>{convertChapterName(chapter as string)} {subcategory} 테스트</h1>
       <KanjiText>{currentWord.kanji}</KanjiText>
       <YomikataBox>
         <YomikataText>
