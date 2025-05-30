@@ -894,7 +894,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '送信元', yomikata: 'そうしんもと', meaning: '송신원, 발신지' },
       { kanji: '無計画', yomikata: 'むけいかく', meaning: '무계획' },
       { kanji: '進学率', yomikata: 'しんがくりつ', meaning: '진학률' },
-      { kanji: '働き手', yomikata: 'はたらきて', meaning: '일꾼, 일손손' },
+      { kanji: '働き手', yomikata: 'はたらきて', meaning: '일꾼, 일손' },
       { kanji: '来学期', yomikata: 'らいがっき', meaning: '다음 학기' },
       { kanji: 'スキー場', yomikata: 'すきーじょう', meaning: '스키장' },
       { kanji: '副大臣', yomikata: 'ふくだいじん', meaning: '부대신, 부장관' },
