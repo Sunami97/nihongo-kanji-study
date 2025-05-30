@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */ 
+/** @jsxImportSource @emotion/react */
 import { Global, css, useTheme } from '@emotion/react';
 import { ThemeType } from './themes';
 
@@ -19,6 +19,12 @@ export const GlobalStyle = () => {
           color: ${theme.text};
           font-family: 'Pretendard', sans-serif;
           transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h2 {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-style: normal;
+          font-weight: 400;
         }
       `}
     />
