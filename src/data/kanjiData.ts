@@ -857,7 +857,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '日本風', yomikata: 'にほんふう', meaning: '일본풍' },
       { kanji: '諸手続き', yomikata: 'しょてつづき', meaning: '여러 절차' },
       { kanji: '二人連れ', yomikata: 'ふたりづれ', meaning: '동행한 두 사람' },
-      { kanji: '抵抗', yomikata: 'ていこう', meaning: '저항심' },
+      { kanji: '抵抗心', yomikata: 'ていこうしん', meaning: '저항심' },
       { kanji: '無回答', yomikata: 'むかいとう', meaning: '무응답' },
     ],
     ' 2022': [
