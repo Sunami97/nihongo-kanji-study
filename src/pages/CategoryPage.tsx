@@ -32,7 +32,6 @@ const Title = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  margin-top:5rem;
 `;
 
 const SubTitle = styled.p`

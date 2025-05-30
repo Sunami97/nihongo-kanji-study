@@ -23,7 +23,7 @@ export const lightTheme = {
   alt: '#f48fb1',
   altHover: '#ec407a',
 
-  backgroundImage1: `url('/au.jpg')`,
+  backgroundImage1: `url('/bg1.jpg')`,
   backgroundImage2: `url('/bg2.jpg')`
 };
 
