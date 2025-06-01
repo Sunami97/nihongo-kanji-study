@@ -850,7 +850,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '最接近', yomikata: 'さいせっきん', meaning: '최접근' },
       { kanji: '名選手', yomikata: 'めいせんしゅ', meaning: '명선수' },
       { kanji: '主原料', yomikata: 'しゅげんりょう', meaning: '주원료' },
-      { kanji: '私宛', yomikata: 'わたくしあて', meaning: '내 앞' },
+      { kanji: '私宛', yomikata: 'わたしあて', meaning: '내 앞' },
     ],
     ' 2023': [
       { kanji: '壁際', yomikata: 'かべぎわ', meaning: '벽가, 벽 옆' },
@@ -862,7 +862,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ],
     ' 2022': [
       { kanji: '異分野', yomikata: 'いぶんや', meaning: '이분야, 다른 분야' },
-      { kanji: '写真付き', yomikata: 'しゃしんつき', meaning: '사진 포함' },
+      { kanji: '写真付き', yomikata: 'しゃしんづき', meaning: '사진 포함' },
       { kanji: '貴団体', yomikata: 'きだんたい', meaning: '귀 단체' },
       { kanji: '低価格', yomikata: 'ていかかく', meaning: '낮은 가격' },
       { kanji: '現制度', yomikata: 'げんせいど', meaning: '현 제도' },
