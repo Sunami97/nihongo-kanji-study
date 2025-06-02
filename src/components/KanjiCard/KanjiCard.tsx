@@ -9,7 +9,7 @@ interface KanjiCardProps {
 }
 
 const Card = styled.div<{ isOpen: boolean }>`
-  width: 220px;
+  width: 250px;
   background-color: ${({ theme, isOpen }) => (isOpen ? theme.cardHoverBg : theme.cardBg)};
   border: 2px solid ${({ theme }) => theme.cardBorder };
   border-radius: 10px;

@@ -11,7 +11,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   padding: 4rem 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
   background-color: ${({ theme }) => theme.background};  
