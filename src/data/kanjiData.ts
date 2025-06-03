@@ -1016,7 +1016,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '歩道', yomikata: 'ほどう', meaning: '보도' },
     ],
     ' 2023': [
-      { kanji: 'かきかき', yomikata: 'かきかき', meaning: '깨작거리다, 비스비스삭' },
+      { kanji: 'かさかさ', yomikata: 'かさかさ', meaning: '꺼칠꺼칠, 바삭바삭' },
       { kanji: '好調', yomikata: 'こうちょう', meaning: '호조, 순조' },
       { kanji: '節約', yomikata: 'せつやく', meaning: '절약' },
       { kanji: '飛びつく', yomikata: 'とびつく', meaning: '달려들다' },
@@ -1034,9 +1034,9 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ' 2022': [
       { kanji: '抱く', yomikata: 'いだく', meaning: '품다' },
       { kanji: 'ぎっしり', yomikata: 'ぎっしり', meaning: '가득 찬 모양, 잔뜩' },
-      { kanji: '劇的', yomikata: 'げきてき', meaning: '극적으로' },
+      { kanji: '劇的に', yomikata: 'げきてきに', meaning: '극적으로' },
       { kanji: '進出', yomikata: 'しんしゅつ', meaning: '진출' },
-      { kanji: 'ぞろぞろ', yomikata: 'ぞろぞろ', meaning: '줄줄, 줄줄줄(많은 사람이 잇달아 움직이는 모양)' },
+      { kanji: 'ぞろぞろ', yomikata: 'ぞろぞろ', meaning: '졸졸, 줄줄(많은 사람이 잇달아 움직이는 모양)' },
       { kanji: '違反', yomikata: 'いはん', meaning: '위반' },
       { kanji: '苦情', yomikata: 'くじょう', meaning: '불만, 고충' },
       { kanji: '交渉', yomikata: 'こうしょう', meaning: '교섭' },
@@ -1065,7 +1065,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ],
     ' 2020': [
       { kanji: '争う', yomikata: 'あらそう', meaning: '다투다, 경쟁하다' },
-      { kanji: '尊重', yomikata: 'そんちょう', meaning: '장애' },
+      { kanji: '尊重', yomikata: 'そんちょう', meaning: '존중' },
       { kanji: '評価', yomikata: 'ひょうか', meaning: '평가' },
       { kanji: 'いいかげん', yomikata: 'いいかげん', meaning: '건성임, 무책임함' },
       { kanji: 'ターゲット', yomikata: 'たーげっと', meaning: '타겟, 표적, 대상' },
@@ -1099,7 +1099,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: 'でたらめに', yomikata: 'でたらめに', meaning: '엉터리로, 아무렇게나' },
       { kanji: '飛び散る', yomikata: 'とびちる', meaning: '흩날리다' },
       { kanji: '敏感', yomikata: 'びんかん', meaning: '민감함' },
-      { kanji: '地点', yomikata: 'ちてん', meaning: '그 지역, 그 고장, 연고지' },
+      { kanji: '地元', yomikata: 'じもと', meaning: '그 지역, 그 고장, 연고지' },
       { kanji: '達する', yomikata: 'たっする', meaning: '이르다, 도달하다' },
       { kanji: '点検', yomikata: 'てんけん', meaning: '점검' },
       { kanji: 'にっこり', yomikata: 'にっこり', meaning: '빙긋이' }
