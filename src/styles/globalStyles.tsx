@@ -22,9 +22,11 @@ export const GlobalStyle = () => {
         }
 
         h2 {
-          font-family: "Zen Kaku Gothic New", sans-serif;
-          font-style: normal;
-          font-weight: 400;
+ font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
         }
       `}
     />
