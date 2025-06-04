@@ -1131,7 +1131,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '提供', yomikata: 'ていきょう', meaning: '제공' },
       { kanji: '引き止める', yomikata: 'ひきとめる', meaning: '말리다, 붙잡다' },
       { kanji: '割り込む', yomikata: 'わりこむ', meaning: '끼어들다, 새치기하다' },
-      { kanji: 'ぐったり', yomikata: 'ぐったり', meaning: '녹초가 됨, 늘어짐짐' },
+      { kanji: 'ぐったり', yomikata: 'ぐったり', meaning: '녹초가 됨, 늘어짐' },
       { kanji: 'ショック', yomikata: 'しょっく', meaning: '쇼크, 충격' },
       { kanji: 'なだらか', yomikata: 'なだらか', meaning: '경사가 완만한' },
       { kanji: '普及', yomikata: 'ふきゅう', meaning: '보급' }
