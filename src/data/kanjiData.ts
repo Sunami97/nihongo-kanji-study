@@ -1350,7 +1350,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ],
     "ま行": [
       { kanji: "まあまあ", yomikata: "まあまあ", meaning: "그런대로" },
-      { kanji: "貧しい", yomikata: "まずしい", meaning: "가난하다, 빈번하다" },
+      { kanji: "貧しい", yomikata: "まずしい", meaning: "가난하다, 변변찮다" },
       { kanji: "迷う", yomikata: "まよう", meaning: "헤매다, 망설이다" },
       { kanji: "見出し", yomikata: "みだし", meaning: "제목, 헤드라인" },
       { kanji: "耳にする", yomikata: "みみにする", meaning: "듣다" },
