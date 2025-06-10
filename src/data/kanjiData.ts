@@ -1307,7 +1307,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: "スムーズ", yomikata: "すむーず", meaning: "순조로움, 원활함" },
       { kanji: "接する", yomikata: "せっする", meaning: "접하다" },
       { kanji: "そういえば", yomikata: "そういえば", meaning: "그러고 보니" },
-      { kanji: "続く", yomikata: "つづく", meaning: "잇달다, 끊임없이" },
+      { kanji: "続々(と)", yomikata: "ぞくぞく", meaning: "잇달다, 끊임없이" },
       { kanji: "そそっかしい", yomikata: "そそっかしい", meaning: "덜렁대다, 경솔하다" }
     ],
     "た行": [
