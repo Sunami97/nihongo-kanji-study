@@ -1290,7 +1290,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: "さて", yomikata: "さて", meaning: "그건 그렇고" },
       { kanji: "覚める", yomikata: "さめる", meaning: "잠이 깨다, 눈이 뜨이다" },
       { kanji: "しかたがない", yomikata: "しかたがない", meaning: "어쩔 수 없다" },
-      { kanji: "直に", yomikata: "じかに", meaning: "바로, 곧" },
+      { kanji: "直に", yomikata: "じきに", meaning: "바로, 곧" },
       { kanji: "敷く", yomikata: "しく", meaning: "깔다" },
       { kanji: "次第に", yomikata: "しだいに", meaning: "점차" },
       { kanji: "しつこい", yomikata: "しつこい", meaning: "집요하다, 끈질기다" },
