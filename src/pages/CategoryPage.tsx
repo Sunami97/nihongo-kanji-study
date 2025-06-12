@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { kanjiData } from '@/data/kanjiData';
 import { PiBookOpenTextBold } from 'react-icons/pi';
+import {convertChapterName} from '@/utils/convertChapterName'
 
 const Container = styled.div`
   padding: 4rem 2rem;
@@ -40,16 +41,39 @@ const SubTitle = styled.p`
   margin-bottom: 3rem;
 `;
 
+// const ButtonWrapper = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   gap: 1.5rem;
+// `;
+
 const ButtonWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1.5rem;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem; 
+  margin-bottom: 2rem;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.primary};
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 `;
+
 
 const ChapterButton = styled.button`
   margin: 0.5rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.buttonText};
   border: none;
@@ -57,7 +81,7 @@ const ChapterButton = styled.button`
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s;     
 
   &:hover {
     background-color: ${({ theme }) => theme.primaryHover};
@@ -70,11 +94,6 @@ export default function CategoryPage() {
   const chapterKeys = Object.keys(kanjiData);
   const handleSelectChapter = (chapterId: string) => {
     navigate(`/sub-category/${chapterId}`);
-  };
-
-  const convertChapterName = (id: string) => {
-    const number = id.replace('chapter', '');
-    return `${number}장`;
   };
 
   return (
