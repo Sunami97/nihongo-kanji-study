@@ -6,6 +6,7 @@ import { PiBookOpenTextBold } from 'react-icons/pi';
 import {convertChapterName} from '@/utils/convertChapterName'
 
 const Container = styled.div`
+  height: 100vh; 
   padding: 4rem 2rem;
   max-width: 500px;
   margin: 0 auto;

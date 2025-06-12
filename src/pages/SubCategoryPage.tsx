@@ -10,6 +10,7 @@ interface SubCategory {
 }
 
 const Container = styled.div`
+  height: 100vh; 
   padding: 4rem 2rem;
   max-width: 500px;
   margin: 0 auto;
