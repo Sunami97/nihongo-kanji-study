@@ -1422,7 +1422,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '速さ', yomikata: 'はやさ', meaning: '빠르기, 속도' },
 
       { kanji: '同僚', yomikata: 'どうりょう', meaning: '동료' },
-      { kanji: '同じ会社の人', yomikata: 'おなじかいしゃのひと', meaning: '같은 회사 사람람' },
+      { kanji: '同じ会社の人', yomikata: 'おなじかいしゃのひと', meaning: '같은 회사 사람' },
 
       { kanji: '油断していた', yomikata: 'ゆだんしていた', meaning: '방심하고 있었다' },
       { kanji: '気をつけていなかった', yomikata: 'きをつけていなかった', meaning: '조심하지 않았다' },
