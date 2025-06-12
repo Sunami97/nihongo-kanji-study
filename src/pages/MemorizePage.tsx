@@ -5,8 +5,10 @@ import { kanjiData } from '@/data/kanjiData';
 import KanjiCard from '@/components/KanjiCard/KanjiCard';
 import { KanjiWord } from '@/data/kanjiData';
 import { shuffleArray } from '@/utils/shuffleArray';
-import {convertChapterName} from '@/utils/convertChapterName'
+import { convertChapterName } from '@/utils/convertChapterName'
 import { FaShuffle } from "react-icons/fa6";
+import { FaArrowUp } from "react-icons/fa";
+
 import styled from '@emotion/styled';
 
 const Container = styled.div`
@@ -81,18 +83,47 @@ const BackButton = styled.button`
   }
 `;
 
+const ScrollTopButton = styled.button`
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.buttonText};
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.primaryHover};
+  }
+`;
 
 export default function MemorizePage() {
   const { chapter, subcategory } = useParams<{ chapter: string; subcategory: string }>();
   const navigate = useNavigate();
   const [isAllOpen, setIsAllOpen] = useState(false);
-
+  const [showScroll, setShowScroll] = useState(false);
   const [kanjiList, setKanjiList] = useState<KanjiWord[]>(() => {
     if (chapter && subcategory && kanjiData[chapter]?.[subcategory]) {
       return kanjiData[chapter][subcategory];
     }
     return [];
   });
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 500); // 스크롤 Y축이 500px 이상일 때 표시
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!chapter) {
@@ -101,6 +132,10 @@ export default function MemorizePage() {
       navigate(`/sub-category/${chapter}`);
     }
   }, [chapter, subcategory, navigate]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleStartTest = () => {
     if (chapter && subcategory) {
@@ -147,6 +182,12 @@ export default function MemorizePage() {
           <KanjiCard key={idx} word={word} defaultOpen={isAllOpen} />
         ))}
       </CardsWrapper>
+      {showScroll && (
+        <ScrollTopButton onClick={scrollToTop}>
+          <FaArrowUp />
+        </ScrollTopButton>
+      )}
     </Container>
+
   );
 }
