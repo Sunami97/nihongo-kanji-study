@@ -42,13 +42,6 @@ const SubTitle = styled.p`
   margin-bottom: 3rem;
 `;
 
-// const ButtonWrapper = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   gap: 1.5rem;
-// `;
-
 const ButtonWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -71,8 +64,8 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-
 const ChapterButton = styled.button`
+  max-width: 8rem;
   margin: 0.5rem;
   padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
