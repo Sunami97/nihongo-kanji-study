@@ -1531,7 +1531,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: 'でたらめ', yomikata: 'でたらめ', meaning: '엉터리임, 되는 대로임' },
       { kanji: 'うそ', yomikata: 'うそ', meaning: '거짓말' },
 
-      { kanji: 'とがっている', yomikata: 'とがっている', meaning: '뾰족하다, 예리하다' },
+      { kanji: 'とがっている', yomikata: 'とがっている', meaning: '뾰족하다, 예민하다' },
       { kanji: '細くなっている', yomikata: 'ほそくなっている', meaning: '좁다, 가늘다, 예리하다' }
     ],
     ' 2021': [
