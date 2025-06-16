@@ -1706,5 +1706,162 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '愉快な', yomikata: 'ゆかいな', meaning: '유쾌한' },
       { kanji: '面白い', yomikata: 'おもしろい', meaning: '재미있는' }
     ]
+  },
+  'chapter13': {
+    ' 2014': [
+      { kanji: '明らかな', yomikata: 'あきらかな', meaning: '확실한, 명백한' },
+      { kanji: 'はっきりした', yomikata: 'はっきりした', meaning: '확실한, 분명한' },
+
+      { kanji: 'お勘定は済ませました', yomikata: 'おかんじょうはすませました', meaning: '계산은 마쳤습니다' },
+      { kanji: 'お金は払いました', yomikata: 'おかねははらいました', meaning: '돈은 지불했습니다' },
+
+      { kanji: '買い占めた', yomikata: 'かいしめた', meaning: '(상품·주식)매점했다' },
+      { kanji: '全部買った', yomikata: 'ぜんぶかった', meaning: '전부 샀다' },
+
+      { kanji: '異なる', yomikata: 'ことなる', meaning: '다르다' },
+      { kanji: '違う', yomikata: 'ちがう', meaning: '다르다' },
+
+      { kanji: 'そろえる', yomikata: 'そろえる', meaning: '(사이즈를) 맞추다' },
+      { kanji: '同じにする', yomikata: 'おなじにする', meaning: '같게 하다' },
+
+      { kanji: '騒々しい', yomikata: 'そうぞうしい', meaning: '시끄럽다, 떠들썩하다' },
+      { kanji: 'うるさい', yomikata: 'うるさい', meaning: '시끄럽다' },
+
+      { kanji: 'たちまち', yomikata: 'たちまち', meaning: '금세' },
+      { kanji: 'すぐに', yomikata: 'すぐに', meaning: '곧, 바로' },
+
+      { kanji: 'たまたま', yomikata: 'たまたま', meaning: '우연히' },
+      { kanji: '偶然', yomikata: 'ぐうぜん', meaning: '우연히' },
+
+      { kanji: '間際', yomikata: 'まぎわ', meaning: '직전' },
+      { kanji: '直前', yomikata: 'ちょくぜん', meaning: '직전' },
+
+      { kanji: '用心', yomikata: 'ようじん', meaning: '조심' },
+      { kanji: '注意', yomikata: 'ちゅうい', meaning: '주의' }
+    ],
+    ' 2013': [
+      { kanji: 'あいまいだ', yomikata: 'あいまいだ', meaning: '애매하다' },
+      { kanji: 'はっきりしない', yomikata: 'はっきりしない', meaning: '분명하지 않다' },
+
+      { kanji: '依然として', yomikata: 'いぜんとして', meaning: '여전히' },
+      { kanji: '相変わらず', yomikata: 'あいかわらず', meaning: '변함없이' },
+
+      { kanji: '思いがけない', yomikata: 'おもいがけない', meaning: '의외의, 뜻밖의' },
+      { kanji: '意外な', yomikata: 'いがいな', meaning: '의외의' },
+
+      { kanji: 'およそ', yomikata: 'およそ', meaning: '대략, 약' },
+      { kanji: 'だいたい', yomikata: 'だいたい', meaning: '대개, 약' },
+
+      { kanji: '済ます', yomikata: 'すます', meaning: '끝내다, 마치다' },
+      { kanji: '終える', yomikata: 'おえる', meaning: '끝내다' },
+
+      { kanji: 'そろう', yomikata: 'そろう', meaning: '갖추어지다, 모이다' },
+      { kanji: '集まる', yomikata: 'あつまる', meaning: '모이다' },
+
+      { kanji: '必死だった', yomikata: 'ひっしだった', meaning: '필사적이었다' },
+      { kanji: '一生懸命だった', yomikata: 'いっしょうけんめいだった', meaning: '열심이었다' },
+
+      { kanji: 'プラン', yomikata: 'ぷらん', meaning: '플랜, 계획' },
+      { kanji: '計画', yomikata: 'けいかく', meaning: '계획' },
+
+      { kanji: '自ら', yomikata: 'みずから', meaning: '스스로' },
+      { kanji: '自分で', yomikata: 'じぶんで', meaning: '스스로' },
+
+      { kanji: '山のふもと', yomikata: 'やまのふもと', meaning: '산기슭' },
+      { kanji: '山の下の方', yomikata: 'やまのしたのほう', meaning: '산의 아래쪽' }
+    ],
+    ' 2012': [
+      { kanji: 'あやまった', yomikata: 'あやまった', meaning: '잘못된' },
+      { kanji: '正しくない', yomikata: 'ただしくない', meaning: '옳지 않은' },
+
+      { kanji: 'かさかさしている', yomikata: 'かさかさしている', meaning: '까칠까칠하다, 버석버석하다' },
+      { kanji: '乾燥している', yomikata: 'かんそうしている', meaning: '건조하다' },
+
+      { kanji: '奇妙な', yomikata: 'きみょうな', meaning: '기묘한' },
+      { kanji: '変な', yomikata: 'へんな', meaning: '이상한' },
+
+      { kanji: '仕上げて', yomikata: 'しあげて', meaning: '일을 끝내고' },
+      { kanji: '完成させて', yomikata: 'かんせいさせて', meaning: '완성시키고' },
+
+      { kanji: 'じっとして', yomikata: 'じっとして', meaning: '꼼짝 않고, 가만히' },
+      { kanji: '動かないで', yomikata: 'うごかないで', meaning: '움직이지 않고' },
+
+      { kanji: '湿っている', yomikata: 'しめっている', meaning: '젖어 있다' },
+      { kanji: 'まだ乾いていない', yomikata: 'まだかわいていない', meaning: '아직 마르지 않았다' },
+
+      { kanji: '相当', yomikata: 'そうとう', meaning: '상당히' },
+      { kanji: 'かなり', yomikata: 'かなり', meaning: '상당히, 꽤' },
+
+      { kanji: '直ちに', yomikata: 'ただちに', meaning: '곧장, 즉시' },
+      { kanji: 'すぐに', yomikata: 'すぐに', meaning: '곧, 바로' },
+
+      { kanji: '追加する', yomikata: 'ついかする', meaning: '추가하다' },
+      { kanji: '足す', yomikata: 'たす', meaning: '더하다' },
+
+      { kanji: '日中', yomikata: 'にっちゅう', meaning: '낮, 주간' },
+      { kanji: '昼間', yomikata: 'ひるま', meaning: '낮, 주간' }
+    ],
+    ' 2011': [
+      { kanji: 'いきなり', yomikata: 'いきなり', meaning: '갑자기' },
+      { kanji: '突然', yomikata: 'とつぜん', meaning: '돌연, 갑자기' },
+
+      { kanji: 'うつむいて', yomikata: 'うつむいて', meaning: '머리를 숙이고' },
+      { kanji: '下を向いて', yomikata: 'したをむいて', meaning: '아래를 향하고' },
+
+      { kanji: '回復する', yomikata: 'かいふくする', meaning: '회복하다' },
+      { kanji: 'よくなる', yomikata: 'よくなる', meaning: '좋아지다' },
+
+      { kanji: 'くたくだただ', yomikata: 'くたくだただ', meaning: '녹초가 되었다' },
+      { kanji: 'ひどく疲れた', yomikata: 'ひどくつかれた', meaning: '몹시 지쳤다' },
+
+      { kanji: '慎重に', yomikata: 'しんちょうに', meaning: '신중히' },
+      { kanji: '十分注意して', yomikata: 'じゅうぶんちゅういして', meaning: '충분히 주의해서' },
+
+      { kanji: '縮んで', yomikata: 'ちぢんで', meaning: '(길이, 크기) 줄고, 줄어' },
+      { kanji: '小さくなって', yomikata: 'ちいさくなって', meaning: '작아지고, 작아져' },
+
+      { kanji: 'ブーム', yomikata: 'ぶーむ', meaning: '유행' },
+      { kanji: '流行', yomikata: 'りゅうこう', meaning: '유행' },
+
+      { kanji: 'ほぼ', yomikata: 'ほぼ', meaning: '거의, 대체로' },
+      { kanji: 'だいたい', yomikata: 'だいたい', meaning: '대체로' },
+
+      { kanji: '優秀だった', yomikata: 'ゆうしゅうだった', meaning: '우수했다' },
+      { kanji: '頭がよかった', yomikata: 'あたまがよかった', meaning: '머리가 좋았다' },
+
+      { kanji: 'わずか', yomikata: 'わずか', meaning: '약간, 불과' },
+      { kanji: '少し', yomikata: 'すこし', meaning: '조금' }
+    ],
+    ' 2010': [
+      { kanji: 'あいさつ', yomikata: 'あいさつ', meaning: '인사' },
+      { kanji: '会釈', yomikata: 'えしゃく', meaning: '가벼운 인사' },
+
+      { kanji: '大げさだ', yomikata: 'おおげさだ', meaning: '과장되다' },
+      { kanji: 'オーバーだ', yomikata: 'おーばーだ', meaning: '오버하다, 과장되다' },
+
+      { kanji: '見解', yomikata: 'けんかい', meaning: '견해' },
+      { kanji: '考え方', yomikata: 'かんがえかた', meaning: '사고방식' },
+
+      { kanji: '雑談', yomikata: 'ざつだん', meaning: '잡담' },
+      { kanji: 'おしゃべり', yomikata: 'おしゃべり', meaning: '수다' },
+
+      { kanji: 'たびたび', yomikata: 'たびたび', meaning: '여러 번, 자주' },
+      { kanji: '何度も', yomikata: 'なんども', meaning: '몇 번이나' },
+
+      { kanji: 'とりあえず', yomikata: 'とりあえず', meaning: '일단, 우선' },
+      { kanji: '一応', yomikata: 'いちおう', meaning: '일단, 우선' },
+
+      { kanji: 'ぶかぶかだ', yomikata: 'ぶかぶかだ', meaning: '헐렁헐렁하다' },
+      { kanji: 'とても大きい', yomikata: 'とてもおおきい', meaning: '무척 크다' },
+
+      { kanji: '安く譲る', yomikata: 'やすくゆずる', meaning: '싸게 넘기다' },
+      { kanji: '安く売る', yomikata: 'やすくうる', meaning: '싸게 팔다' },
+
+      { kanji: 'レンタルする', yomikata: 'れんたるする', meaning: '대여하다' },
+      { kanji: '借りる', yomikata: 'かりる', meaning: '빌리다' },
+
+      { kanji: '自分勝手な', yomikata: 'じぶんかってな', meaning: '제멋대로의' },
+      { kanji: 'わがままな', yomikata: 'わがままな', meaning: '제멋대로의' }
+    ],
   }
 };
