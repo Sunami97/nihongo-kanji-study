@@ -1811,7 +1811,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '回復する', yomikata: 'かいふくする', meaning: '회복하다' },
       { kanji: 'よくなる', yomikata: 'よくなる', meaning: '좋아지다' },
 
-      { kanji: 'くたくだただ', yomikata: 'くたくだただ', meaning: '녹초가 되었다' },
+      { kanji: 'くたくただ', yomikata: 'くたくただ', meaning: '녹초가 되었다' },
       { kanji: 'ひどく疲れた', yomikata: 'ひどくつかれた', meaning: '몹시 지쳤다' },
 
       { kanji: '慎重に', yomikata: 'しんちょうに', meaning: '신중히' },
