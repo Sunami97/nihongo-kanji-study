@@ -1708,6 +1708,37 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
     ]
   },
   'chapter13': {
+    ' 2015': [
+      { kanji: 'おそらく', yomikata: 'おそらく', meaning: '아마도' },
+      { kanji: 'たぶん', yomikata: 'たぶん', meaning: '아마도' },
+
+      { kanji: 'かつて', yomikata: 'かつて', meaning: '일찍이' },
+      { kanji: '以前', yomikata: 'いぜん', meaning: '이전에' },
+
+      { kanji: '小柄だ', yomikata: 'こがらだ', meaning: '몸집이 작다' },
+      { kanji: '体が小さい', yomikata: 'からだがちいさい', meaning: '체격이 작다' },
+
+      { kanji: 'ささやく', yomikata: 'ささやく', meaning: '속삭이다' },
+      { kanji: '小声で話す', yomikata: 'こごえではなす', meaning: '작은 소리로 이야기하다' },
+
+      { kanji: '収納する', yomikata: 'しゅうのうする', meaning: '수납하다' },
+      { kanji: '仕舞う', yomikata: 'しまう', meaning: '정리하다, 치우다' },
+
+      { kanji: '所有する', yomikata: 'しょゆうする', meaning: '소유하다' },
+      { kanji: '持つ', yomikata: 'もつ', meaning: '가지다' },
+
+      { kanji: 'テンポ', yomikata: 'てんぽ', meaning: '템포, 빠르기, 박자, 속도' },
+      { kanji: '速さ', yomikata: 'はやさ', meaning: '빠르기, 속도' },
+
+      { kanji: '妙な', yomikata: 'みょうな', meaning: '묘한' },
+      { kanji: '変な', yomikata: 'へんな', meaning: '이상한' },
+
+      { kanji: '無口だ', yomikata: 'むくちだ', meaning: '말이 없다' },
+      { kanji: 'あまり話さない', yomikata: 'あまりはなさない', meaning: '그다지 말하지 않는다' },
+
+      { kanji: 'やや', yomikata: 'やや', meaning: '약간' },
+      { kanji: '少し', yomikata: 'すこし', meaning: '조금' }
+    ],
     ' 2014': [
       { kanji: '明らかな', yomikata: 'あきらかな', meaning: '확실한, 명백한' },
       { kanji: 'はっきりした', yomikata: 'はっきりした', meaning: '확실한, 분명한' },
