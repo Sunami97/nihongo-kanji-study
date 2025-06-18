@@ -131,7 +131,28 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { kanji: '握る', yomikata: 'にぎる', meaning: '쥐다' },
       { kanji: '憎い', yomikata: 'にくい', meaning: '밉다' },
       { kanji: '憎む', yomikata: 'にくむ', meaning: '미워하다, 시기하다' }
-
+    ],
+    ' 2주차(모)': [
+      { kanji: '競馬', yomikata: 'けいば', meaning: '경마' },
+      { kanji: '除外', yomikata: 'じょがい', meaning: '제외' },
+      { kanji: 'おのおの', yomikata: 'おのおの', meaning: '각각' },
+      { kanji: 'らくらく', yomikata: 'らくらく', meaning: '쉽게, 거뜬히' },
+      { kanji: 'ひま', yomikata: 'ひま', meaning: '한가함, 여유' },
+      { kanji: '解放', yomikata: 'かいほう', meaning: '해방, 해제' },
+      { kanji: 'ひったくり', yomikata: 'ひったくり', meaning: '날치기, 소매치기' },
+      { kanji: '強化', yomikata: 'きょうか', meaning: '강화' },
+      { kanji: '経過', yomikata: 'けいか', meaning: '경과, 지나감' },
+      { kanji: '国王', yomikata: 'こくおう', meaning: '국왕' },
+      { kanji: '治める', yomikata: 'おさめる', meaning: '다스리다, 통치하다' },
+      { kanji: '修める', yomikata: 'おさめる', meaning: '닦다, 익히다, 수양하다' },
+      { kanji: '差し支えない', yomikata: 'さしつかえない', meaning: '지장 없다' },
+      { kanji: '習得', yomikata: 'しゅうとく', meaning: '습득' },
+      { kanji: '非公開', yomikata: 'ひこうかい', meaning: '비공개' },
+      { kanji: '真似', yomikata: 'まね', meaning: '흉내, 모방' },
+      { kanji: '芝居', yomikata: 'しばい', meaning: '연극' },
+      { kanji: '上演', yomikata: 'じょうえん', meaning: '상연' },
+      { kanji: '見本', yomikata: 'みほん', meaning: '견본, 샘플' },
+      { kanji: '社交', yomikata: 'しゃこう', meaning: '사교' }
     ]
   },
   'chapter1': {
