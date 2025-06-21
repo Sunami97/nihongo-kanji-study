@@ -2121,7 +2121,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
 
     ' 2012': [
       { kanji: '交代', yomikata: 'こうたい', meaning: '교대' },
-      { kanji: '公同', yomikata: 'こうどう', meaning: '합동' },
+      { kanji: '合同', yomikata: 'ごうどう', meaning: '합동' },
       { kanji: '心強い', yomikata: 'こころづよい', meaning: '마음 든든하다' },
       { kanji: 'さっさと', yomikata: 'さっさと', meaning: '어서, 서둘러' },
       { kanji: '問い合わせる', yomikata: 'といあわせる', meaning: '문의하다' },
