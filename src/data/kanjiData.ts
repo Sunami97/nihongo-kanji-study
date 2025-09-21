@@ -5,149 +5,309 @@ export interface KanjiWord {
 }
 
 export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
-  'chapter1': {
-  ' 2015': [
-    { "kanji": "興奮", "yomikata": "こうふん", "meaning": "흥분" },
-    { "kanji": "唱える", "yomikata": "となえる", "meaning": "외치다, 주장하다" },
-    { "kanji": "姿勢", "yomikata": "しせい", "meaning": "자세, 태도" },
-    { "kanji": "値打ち", "yomikata": "ねうち", "meaning": "가치가 있다, ~할 만하다" },
-    { "kanji": "面倒", "yomikata": "めんどう", "meaning": "수고, 고생, 번거로움" },
-    { "kanji": "信頼", "yomikata": "しんらい", "meaning": "신뢰, 의지" },
-    { "kanji": "添付", "yomikata": "てんぷ", "meaning": "첨부" },
-    { "kanji": "慕われる", "yomikata": "したわれる", "meaning": "경모받다, 사랑받다" },
-    { "kanji": "破損", "yomikata": "はそん", "meaning": "파손" },
-    { "kanji": "承諾", "yomikata": "しょうだく", "meaning": "승낙" },
-    { "kanji": "淡い", "yomikata": "あわい", "meaning": "옅다, 빛깔이 진하지 않다" },
-    { "kanji": "画一的", "yomikata": "かくいつてき", "meaning": "획일적" }
-  ],
-  ' 2014': [
-    { "kanji": "挑戦", "yomikata": "ちょうせん", "meaning": "도전" },
-    { "kanji": "踏む", "yomikata": "ふむ", "meaning": "밟다" },
-    { "kanji": "強調", "yomikata": "きょうちょう", "meaning": "강조" },
-    { "kanji": "懲りる", "yomikata": "こりる", "meaning": "고생하다, 교훈을 얻다" },
-    { "kanji": "躍進", "yomikata": "やくしん", "meaning": "약진, 눈부시게 진출함" },
-    { "kanji": "遂行", "yomikata": "すいこう", "meaning": "수행 (계획·책임 등을)" },
-    { "kanji": "健やか", "yomikata": "すこやか", "meaning": "튼튼함, 건강함" },
-    { "kanji": "中核", "yomikata": "ちゅうかく", "meaning": "중추, 핵심" },
-    { "kanji": "凝縮", "yomikata": "ぎょうしゅく", "meaning": "응축, 응결" },
-    { "kanji": "否めない", "yomikata": "いなめない", "meaning": "부정할 수 없다" }
-  ],
-  ' 2013': [
-    { "kanji": "把握", "yomikata": "はあく", "meaning": "파악" },
-    { "kanji": "借り", "yomikata": "かり", "meaning": "빚, 빌린 것" },
-    { "kanji": "趣旨", "yomikata": "しゅし", "meaning": "취지" },
-    { "kanji": "日夜", "yomikata": "にちや", "meaning": "밤낮, 언제나, 늘" },
-    { "kanji": "真っく", "yomikata": "まっく", "meaning": "관철하다, 꿋꿋이 하다" },
-    { "kanji": "富", "yomikata": "とみ", "meaning": "부유, 재산" },
-    { "kanji": "愚かな", "yomikata": "おろかな", "meaning": "어리석은" },
-    { "kanji": "巧妙な", "yomikata": "こうみょうな", "meaning": "교묘한" },
-    { "kanji": "憩い", "yomikata": "いこい", "meaning": "휴식" },
-    { "kanji": "需要", "yomikata": "じゅよう", "meaning": "수요" },
-    { "kanji": "緩和", "yomikata": "かんわ", "meaning": "완화" },
-    { "kanji": "跡地", "yomikata": "あとち", "meaning": "철거부지, 잔해" }
-  ],
-  ' 2012': [
-    { "kanji": "枠", "yomikata": "わく", "meaning": "테두리" },
-    { "kanji": "潮流", "yomikata": "ちょうりゅう", "meaning": "조류, 흐름" },
-    { "kanji": "名誉", "yomikata": "めいよ", "meaning": "명예" },
-    { "kanji": "費やす", "yomikata": "ついやす", "meaning": "소비하다" },
-    { "kanji": "由緒", "yomikata": "ゆいしょ", "meaning": "유서" },
-    { "kanji": "手際", "yomikata": "てぎわ", "meaning": "솜씨, 수완" },
-    { "kanji": "群集", "yomikata": "ぐんしゅう", "meaning": "군중" },
-    { "kanji": "覆す", "yomikata": "くつがえす", "meaning": "뒤엎다" },
-    { "kanji": "心地よい", "yomikata": "ここちよい", "meaning": "기분이 좋다, 상쾌하다" },
-    { "kanji": "改装", "yomikata": "かいそう", "meaning": "개장, 개역" },
-    { "kanji": "克明", "yomikata": "こくめい", "meaning": "자세하고 꼼꼼함, 성실함" },
-    { "kanji": "踏襲する", "yomikata": "とうしゅうする", "meaning": "답습하다, 전철을 밟다" }
-  ],
-  ' 2011': [
-    { "kanji": "躍る", "yomikata": "おどる", "meaning": "춤추다" },
-    { "kanji": "漠然と", "yomikata": "ばくぜんと", "meaning": "막연히" },
-    { "kanji": "閲覧", "yomikata": "えつらん", "meaning": "열람" },
-    { "kanji": "釈明", "yomikata": "しゃくめい", "meaning": "변명, 해명" },
-    { "kanji": "兆し", "yomikata": "きざし", "meaning": "조짐, 징조" },
-    { "kanji": "合併", "yomikata": "がっぺい", "meaning": "합병" },
-    { "kanji": "利益", "yomikata": "りえき", "meaning": "이익" },
-    { "kanji": "逃れる", "yomikata": "のがれる", "meaning": "벗어나다, 면하다" },
-    { "kanji": "考慮", "yomikata": "こうりょ", "meaning": "고려" },
-    { "kanji": "避る", "yomikata": "さける", "meaning": "가로막다, 차단하다" },
-    { "kanji": "根拠", "yomikata": "こんきょ", "meaning": "근거" },
-    { "kanji": "肝心", "yomikata": "かんじん", "meaning": "중요함" }
-  ],
-  ' 2010': [
-    { "kanji": "本筋", "yomikata": "ほんすじ", "meaning": "본론" },
-    { "kanji": "伴奏", "yomikata": "ばんそう", "meaning": "반주" },
-    { "kanji": "推理", "yomikata": "すいり", "meaning": "추리" },
-    { "kanji": "極める", "yomikata": "きわめる", "meaning": "더없이 ~하다, 다하다" },
-    { "kanji": "練る", "yomikata": "ねる", "meaning": "반죽하다, 계획·구상을 짜다, 다듬다" },
-    { "kanji": "繁盛", "yomikata": "はんじょう", "meaning": "번성, 번창" },
-    { "kanji": "締める", "yomikata": "しめる", "meaning": "(끈 등으로) 매다, 조이다, 잡다" },
-    { "kanji": "契約", "yomikata": "けいやく", "meaning": "계약" },
-    { "kanji": "潤う", "yomikata": "うるおう", "meaning": "축축해지다, 혜택을 받다" },
-    { "kanji": "手薄な", "yomikata": "てうすな", "meaning": "허술한, 불충분한" },
-    { "kanji": "壊す", "yomikata": "こわす", "meaning": "부수다, 고장내다" },
-    { "kanji": "華々しい", "yomikata": "はなばなしい", "meaning": "화려하다" }
-  ],
-   '지문1': [
-    { "kanji": "郷", "yomikata": "さと／きょう", "meaning": "고향, 시골" },
-    { "kanji": "郷に入っては郷に従え", "yomikata": "ごうにいってはごうにしたがえ", "meaning": "로마에 가면 로마법을 따르라" },
-    { "kanji": "海外旅行", "yomikata": "かいがいりょこう", "meaning": "해외여행" },
-    { "kanji": "観光客", "yomikata": "かんこうきゃく", "meaning": "관광객" },
-    { "kanji": "現地", "yomikata": "げんち", "meaning": "현지" },
-    { "kanji": "多様", "yomikata": "たよう", "meaning": "다양함" },
-    { "kanji": "世界遺産", "yomikata": "せかいいさん", "meaning": "세계유산" },
-    { "kanji": "神聖", "yomikata": "しんせい", "meaning": "신성함" },
-    { "kanji": "場所", "yomikata": "ばしょ", "meaning": "장소" },
-    { "kanji": "撮影禁止", "yomikata": "さつえいきんし", "meaning": "촬영금지" },
-    { "kanji": "勝手", "yomikata": "かって", "meaning": "멋대로, 제멋대로" },
-    { "kanji": "行為", "yomikata": "こうい", "meaning": "행위" },
-    { "kanji": "日本人", "yomikata": "にほんじん", "meaning": "일본인" },
-    { "kanji": "仏閣", "yomikata": "ぶっかく", "meaning": "불각(불교 사찰)" },
-    { "kanji": "神社", "yomikata": "じんじゃ", "meaning": "신사" },
-    { "kanji": "他国", "yomikata": "たこく", "meaning": "타국, 다른 나라" },
-    { "kanji": "印象", "yomikata": "いんしょう", "meaning": "인상" },
-    { "kanji": "外国", "yomikata": "がいこく", "meaning": "외국" },
-    { "kanji": "海外", "yomikata": "かいがい", "meaning": "해외" },
-    { "kanji": "頭", "yomikata": "あたま", "meaning": "머리" },
-    { "kanji": "苦悩", "yomikata": "くのう", "meaning": "고뇌, 괴로움" },
-    { "kanji": "観光地", "yomikata": "かんこうち", "meaning": "관광지" },
-    { "kanji": "民家", "yomikata": "みんか", "meaning": "민가, 일반 가옥" },
-    { "kanji": "例", "yomikata": "れい", "meaning": "예, 사례" },
-    { "kanji": "電車", "yomikata": "でんしゃ", "meaning": "전철, 전차" },
-    { "kanji": "通る", "yomikata": "とおる", "meaning": "통과하다" },
-    { "kanji": "踏切", "yomikata": "ふみきり", "meaning": "건널목" },
-    { "kanji": "線路", "yomikata": "せんろ", "meaning": "선로" },
-    { "kanji": "紙", "yomikata": "かみ", "meaning": "종이" },
-    { "kanji": "舞妓", "yomikata": "まいこ", "meaning": "무희(교토의 전통 무용 소녀)" },
-    { "kanji": "無断", "yomikata": "むだん", "meaning": "무단" },
-    { "kanji": "建物", "yomikata": "たてもの", "meaning": "건물" },
-    { "kanji": "マナー", "yomikata": "まなー", "meaning": "매너, 예절" },
-    { "kanji": "観光公害", "yomikata": "かんこうこうがい", "meaning": "관광공해" },
-    { "kanji": "社会", "yomikata": "しゃかい", "meaning": "사회" },
-    { "kanji": "共同生活", "yomikata": "きょうどうせいかつ", "meaning": "공동생활" },
-    { "kanji": "規則", "yomikata": "きそく", "meaning": "규칙" },
-    { "kanji": "必要不可欠", "yomikata": "ひつようふかけつ", "meaning": "필요불가결" },
-    { "kanji": "赤信号", "yomikata": "あかしんごう", "meaning": "빨간 신호등" },
-    { "kanji": "車", "yomikata": "くるま", "meaning": "차, 자동차" },
-    { "kanji": "通り", "yomikata": "とおり", "meaning": "거리, 길" },
-    { "kanji": "信号", "yomikata": "しんごう", "meaning": "신호" },
-    { "kanji": "無視", "yomikata": "むし", "meaning": "무시" },
-    { "kanji": "校則", "yomikata": "こうそく", "meaning": "교칙" },
-    { "kanji": "スカート", "yomikata": "すかーと", "meaning": "스커트" },
-    { "kanji": "長さ", "yomikata": "ながさ", "meaning": "길이" },
-    { "kanji": "会社", "yomikata": "かいしゃ", "meaning": "회사" },
-    { "kanji": "平気", "yomikata": "へいき", "meaning": "태연함, 무사함" },
-    { "kanji": "遅刻", "yomikata": "ちこく", "meaning": "지각" },
-    { "kanji": "仕事", "yomikata": "しごと", "meaning": "일, 직업" },
-    { "kanji": "個人的", "yomikata": "こじんてき", "meaning": "개인적" },
-    { "kanji": "連絡", "yomikata": "れんらく", "meaning": "연락" },
-    { "kanji": "守る", "yomikata": "まもる", "meaning": "지키다" },
-    { "kanji": "ルール", "yomikata": "るーる", "meaning": "규칙" },
-    { "kanji": "堂々", "yomikata": "どうどう", "meaning": "당당히" },
-    { "kanji": "秩序", "yomikata": "ちつじょ", "meaning": "질서" },
-    { "kanji": "規律", "yomikata": "きりつ", "meaning": "규율" },
-    { "kanji": "環境", "yomikata": "かんきょう", "meaning": "환경" }
-  ]
-}
-
+  "chapter1": {
+    "動詞_あ行": [
+      { "kanji": "明かす", "yomikata": "あかす", "meaning": "밝히다, 털어놓다" },
+      { "kanji": "商う", "yomikata": "あきなう", "meaning": "장사하다" },
+      { "kanji": "値する", "yomikata": "あたいする", "meaning": "가치가 있다" },
+      { "kanji": "歩む", "yomikata": "あゆむ", "meaning": "걷다, 나아가다" },
+      { "kanji": "言い張る", "yomikata": "いいはる", "meaning": "우겨대다, 주장하다" },
+      { "kanji": "労わる", "yomikata": "いたわる", "meaning": "위로하다, 노고를 치하하다" },
+      { "kanji": "挑む", "yomikata": "いどむ", "meaning": "도전하다" },
+      { "kanji": "否む", "yomikata": "いなむ", "meaning": "부정하다, 거부하다" },
+      { "kanji": "威張る", "yomikata": "いばる", "meaning": "뽐내다, 으스대다" },
+      { "kanji": "戒める", "yomikata": "いましめる", "meaning": "훈계하다, 경고하다" },
+      { "kanji": "浮かれる", "yomikata": "うかれる", "meaning": "들뜨다, 신나다" },
+      { "kanji": "打ち切る", "yomikata": "うちきる", "meaning": "중지하다" },
+      { "kanji": "打ち込む", "yomikata": "うちこむ", "meaning": "몰두하다, 몰입하다" },
+      { "kanji": "訴える", "yomikata": "うったえる", "meaning": "호소하다" },
+      { "kanji": "促す", "yomikata": "うながす", "meaning": "촉구하다, 재촉하다" },
+      { "kanji": "敬う", "yomikata": "うやまう", "meaning": "공경하다" },
+      { "kanji": "恨む", "yomikata": "うらむ", "meaning": "원망하다" },
+      { "kanji": "潤う", "yomikata": "うるおう", "meaning": "축축해지다, 윤택해지다" },
+      { "kanji": "拝む", "yomikata": "おがむ", "meaning": "절하다, 경배하다" },
+      { "kanji": "怠る", "yomikata": "おこたる", "meaning": "게을리하다, 소홀히 하다" },
+      { "kanji": "襲う", "yomikata": "おそう", "meaning": "덮치다, 습격하다" },
+      { "kanji": "陥る", "yomikata": "おちいる", "meaning": "나쁜 상황에 빠지다" },
+      { "kanji": "劣る", "yomikata": "おとる", "meaning": "뒤떨어지다, 뒤지다" },
+      { "kanji": "衰える", "yomikata": "おとろえる", "meaning": "쇠약해지다" },
+      { "kanji": "帯びる", "yomikata": "おびる", "meaning": "(성질·경향)을 띠다" },
+      { "kanji": "思い返す", "yomikata": "おもいかえす", "meaning": "돌아보다" },
+      { "kanji": "思い詰める", "yomikata": "おもいつめる", "meaning": "골몰하다" },
+      { "kanji": "及ぼす", "yomikata": "およぼす", "meaning": "영향을 미치다" }
+    ],
+    "動詞_か行": [
+      { "kanji": "顧みる", "yomikata": "かえりみる", "meaning": "돌아보다, 회고하다" },
+      { "kanji": "省みる", "yomikata": "かえりみる", "meaning": "반성하다" },
+      { "kanji": "掲げる", "yomikata": "かかげる", "meaning": "내걸다, 내세우다" },
+      { "kanji": "稼ぐ", "yomikata": "かせぐ", "meaning": "돈벌이하다, (시간을) 벌다" },
+      { "kanji": "偏る", "yomikata": "かたよる", "meaning": "치우치다, 편중되다" },
+      { "kanji": "絡む", "yomikata": "からむ", "meaning": "휘감기다, 관련되다" },
+      { "kanji": "築く", "yomikata": "きずく", "meaning": "쌓다, 구축하다" },
+      { "kanji": "切り出す", "yomikata": "きりだす", "meaning": "말을 꺼내다" },
+      { "kanji": "食い違う", "yomikata": "くいちがう", "meaning": "(의견)이 엇갈리다" },
+      { "kanji": "食い止める", "yomikata": "くいとめる", "meaning": "저지하다, 막다" },
+      { "kanji": "崩す", "yomikata": "くずす", "meaning": "무너뜨리다, 흩뜨리다" },
+      { "kanji": "覆す", "yomikata": "くつがえす", "meaning": "뒤집어엎다" },
+      { "kanji": "拘る", "yomikata": "こだわる", "meaning": "집착하다, 세세하게 신경을 쓰다" },
+      { "kanji": "拒む", "yomikata": "こばむ", "meaning": "거부하다, 저지하다" },
+      { "kanji": "試みる", "yomikata": "こころみる", "meaning": "시도하다" }
+    ],
+    "動詞_さ行": [
+      { "kanji": "遮る", "yomikata": "さえぎる", "meaning": "차단하다" },
+      { "kanji": "逆らう", "yomikata": "さからう", "meaning": "거스르다, 거역하다" },
+      { "kanji": "差し引く", "yomikata": "さしひく", "meaning": "공제하다, 차감하다" },
+      { "kanji": "授ける", "yomikata": "さずける", "meaning": "수여하다, 하사하다" },
+      { "kanji": "察する", "yomikata": "さっする", "meaning": "헤아리다" },
+      { "kanji": "悟る", "yomikata": "さとる", "meaning": "깨닫다" },
+      { "kanji": "妨げる", "yomikata": "さまたげる", "meaning": "방해하다" },
+      { "kanji": "障る", "yomikata": "さわる", "meaning": "방해가 되다, 지장이 있다" }
+    ],
+    "動詞_た行": [
+      { "kanji": "携える", "yomikata": "たずさえる", "meaning": "지니다, 거느리다" },
+      { "kanji": "漂わせる", "yomikata": "ただよわせる", "meaning": "풍기게 하다" },
+      { "kanji": "断つ", "yomikata": "たつ", "meaning": "끊다" },
+      { "kanji": "尊ぶ", "yomikata": "とうとぶ／たっとぶ", "meaning": "존경하다" },
+      { "kanji": "尊い", "yomikata": "とうとい／たっとい", "meaning": "귀중하다" },
+      { "kanji": "高める", "yomikata": "たかめる", "meaning": "높이다" },
+      { "kanji": "絶つ", "yomikata": "たつ", "meaning": "끊어 없애다" },
+      { "kanji": "立ち寄る", "yomikata": "たちよる", "meaning": "잠시 들르다" },
+      { "kanji": "立ち去る", "yomikata": "たちさる", "meaning": "떠나다" },
+      { "kanji": "立ち会う", "yomikata": "たちあう", "meaning": "입회하다" },
+      { "kanji": "立ち向かう", "yomikata": "たちむかう", "meaning": "맞서다" },
+      { "kanji": "立ち向ける", "yomikata": "たちむける", "meaning": "향하게 하다" },
+      { "kanji": "頼る", "yomikata": "たよる", "meaning": "의지하다" },
+      { "kanji": "足りる", "yomikata": "たりる", "meaning": "충분하다" },
+      { "kanji": "試す", "yomikata": "ためす", "meaning": "시험하다" },
+      { "kanji": "費やす", "yomikata": "ついやす", "meaning": "다 소비하다" },
+      { "kanji": "突き止める", "yomikata": "つきとめる", "meaning": "밝혀내다" },
+      { "kanji": "尽くす", "yomikata": "つくす", "meaning": "힘을 다하다" },
+      { "kanji": "償う", "yomikata": "つぐなう", "meaning": "보상하다" },
+      { "kanji": "告げる", "yomikata": "つげる", "meaning": "알리다" },
+      { "kanji": "培う", "yomikata": "つちかう", "meaning": "배양하다" },
+      { "kanji": "慎む", "yomikata": "つつしむ", "meaning": "삼가다" },
+      { "kanji": "集う", "yomikata": "つどう", "meaning": "모이다" },
+      { "kanji": "募る", "yomikata": "つのる", "meaning": "강해지다/모집하다" },
+      { "kanji": "積み立てる", "yomikata": "つみたてる", "meaning": "적립하다" },
+      { "kanji": "貫く", "yomikata": "つらぬく", "meaning": "관철하다" },
+      { "kanji": "遠ざける", "yomikata": "とおざける", "meaning": "멀리하다" },
+      { "kanji": "説く", "yomikata": "とく", "meaning": "설명하다, 설득하다" },
+      { "kanji": "遂げる", "yomikata": "とげる", "meaning": "이루다, 완수하다" },
+      { "kanji": "滞る", "yomikata": "とどこおる", "meaning": "막히다, 밀리다" },
+      { "kanji": "唱える", "yomikata": "となえる", "meaning": "외치다, 주장하다" },
+      { "kanji": "戸惑う", "yomikata": "とまどう", "meaning": "당황하다" }
+    ],
+    "動詞_な行": [
+      { "kanji": "嘆く", "yomikata": "なげく", "meaning": "한탄하다" },
+      { "kanji": "怠ける", "yomikata": "なまける", "meaning": "게으름 피우다" }
+    ],
+    "動詞_は行": [
+      { "kanji": "図る", "yomikata": "はかる", "meaning": "도모하다" },
+      { "kanji": "励ます", "yomikata": "はげます", "meaning": "격려하다" },
+      { "kanji": "阻む", "yomikata": "はばむ", "meaning": "막다" },
+      { "kanji": "省く", "yomikata": "はぶく", "meaning": "생략하다" },
+      { "kanji": "率いる", "yomikata": "ひきいる", "meaning": "이끌다" },
+      { "kanji": "控える", "yomikata": "ひかえる", "meaning": "삼가다" },
+      { "kanji": "響く", "yomikata": "ひびく", "meaning": "울리다" }
+    ],
+    "動詞_ま行": [
+      { "kanji": "紛れる", "yomikata": "まぎれる", "meaning": "뒤섞이다" },
+      { "kanji": "交える", "yomikata": "まじえる", "meaning": "섞다" },
+      { "kanji": "免れる", "yomikata": "まぬかれる", "meaning": "면하다" },
+      { "kanji": "招く", "yomikata": "まねく", "meaning": "초대하다, 불러들이다" },
+      { "kanji": "見合わせる", "yomikata": "みあわせる", "meaning": "서로 보다, 보류하다" },
+      { "kanji": "見落とす", "yomikata": "みおとす", "meaning": "간과하다" },
+      { "kanji": "漏れる", "yomikata": "もれる", "meaning": "새다, 누설되다" }
+    ],
+    "動詞_や行": [
+      { "kanji": "養う", "yomikata": "やしなう", "meaning": "기르다" },
+      { "kanji": "和らげる", "yomikata": "やわらげる", "meaning": "완화하다" }
+    ],
+    "動詞_ら行": [
+      { "kanji": "論じる", "yomikata": "ろんじる", "meaning": "논하다" }
+    ],
+    "動詞_わ行": [
+      { "kanji": "詫びる", "yomikata": "わびる", "meaning": "사죄하다" }
+    ],
+    "名詞_あ行": [
+      { "kanji": "相性", "yomikata": "あいしょう", "meaning": "궁합, 맞음새" },
+      { "kanji": "悪循環", "yomikata": "あくじゅんかん", "meaning": "악순환" },
+      { "kanji": "足跡", "yomikata": "あしあと", "meaning": "발자취" },
+      { "kanji": "預かり", "yomikata": "あずかり", "meaning": "보관, 보류" },
+      { "kanji": "後回し", "yomikata": "あとまわし", "meaning": "뒷전, 연기" },
+      { "kanji": "誂え", "yomikata": "あつらえ", "meaning": "주문제작" }
+    ],
+    "名詞_か行": [
+      { "kanji": "化合物", "yomikata": "かごうぶつ", "meaning": "화합물" },
+      { "kanji": "確信", "yomikata": "かくしん", "meaning": "확신" },
+      { "kanji": "過失", "yomikata": "かしつ", "meaning": "과실, 실수" },
+      { "kanji": "片言", "yomikata": "かたこと", "meaning": "서투른 말씨" },
+      { "kanji": "空模様", "yomikata": "そらもよう", "meaning": "하늘 상태, 날씨" }
+    ],
+    "名詞_さ行": [
+      { "kanji": "採算", "yomikata": "さいさん", "meaning": "채산, 수지" },
+      { "kanji": "財源", "yomikata": "ざいげん", "meaning": "재원" },
+      { "kanji": "作戦", "yomikata": "さくせん", "meaning": "작전" },
+      { "kanji": "錯覚", "yomikata": "さっかく", "meaning": "착각" },
+      { "kanji": "砂利", "yomikata": "じゃり", "meaning": "자갈" }
+    ],
+    "名詞_た行": [
+      { "kanji": "体裁", "yomikata": "ていさい", "meaning": "체면, 외관" },
+      { "kanji": "退治", "yomikata": "たいじ", "meaning": "퇴치" },
+      { "kanji": "多様性", "yomikata": "たようせい", "meaning": "다양성" },
+      { "kanji": "脱税", "yomikata": "だつぜい", "meaning": "탈세" },
+      { "kanji": "短波", "yomikata": "たんぱ", "meaning": "단파" }
+    ],
+    "名詞_な行": [
+      { "kanji": "内訳", "yomikata": "うちわけ", "meaning": "내역" },
+      { "kanji": "仲人", "yomikata": "なこうど", "meaning": "중매인" },
+      { "kanji": "成り行き", "yomikata": "なりゆき", "meaning": "되어가는 상황, 추세" },
+      { "kanji": "難民", "yomikata": "なんみん", "meaning": "난민" }
+    ],
+    "名詞_は行": [
+      { "kanji": "配偶者", "yomikata": "はいぐうしゃ", "meaning": "배우자" },
+      { "kanji": "破損", "yomikata": "はそん", "meaning": "파손" },
+      { "kanji": "反響", "yomikata": "はんきょう", "meaning": "반향, 반응" },
+      { "kanji": "繁盛", "yomikata": "はんじょう", "meaning": "번창" }
+    ],
+    "名詞_ま行": [
+      { "kanji": "枚数", "yomikata": "まいすう", "meaning": "매수" },
+      { "kanji": "前置き", "yomikata": "まえおき", "meaning": "머리말, 서두" },
+      { "kanji": "真心", "yomikata": "まごころ", "meaning": "진심" },
+      { "kanji": "紛失", "yomikata": "ふんしつ", "meaning": "분실" }
+    ],
+    "名詞_や行": [
+      { "kanji": "役職", "yomikata": "やくしょく", "meaning": "직위, 직책" },
+      { "kanji": "役立ち", "yomikata": "やくだち", "meaning": "도움됨" },
+      { "kanji": "野外", "yomikata": "やがい", "meaning": "야외" }
+    ],
+    "名詞_ら行": [
+      { "kanji": "来場", "yomikata": "らいじょう", "meaning": "내장, 찾아옴" },
+      { "kanji": "落ち度", "yomikata": "おちど", "meaning": "실수, 과실" },
+      { "kanji": "利潤", "yomikata": "りじゅん", "meaning": "이윤" }
+    ],
+    "名詞_わ行": [
+      { "kanji": "枠組み", "yomikata": "わくぐみ", "meaning": "틀, 체계" },
+      { "kanji": "惑星", "yomikata": "わくせい", "meaning": "행성" },
+      { "kanji": "我が国", "yomikata": "わがくに", "meaning": "우리나라" }
+    ],
+    "形容詞_あ行": [
+      { "kanji": "淡い", "yomikata": "あわい", "meaning": "옅다, 희미하다" },
+      { "kanji": "危うい", "yomikata": "あやうい", "meaning": "위태롭다" },
+      { "kanji": "怪しい", "yomikata": "あやしい", "meaning": "수상하다, 이상하다" },
+      { "kanji": "荒い", "yomikata": "あらい", "meaning": "거칠다" },
+      { "kanji": "厚かましい", "yomikata": "あつかましい", "meaning": "뻔뻔스럽다" }
+    ],
+    "形容詞_い行": [
+      { "kanji": "忙しい", "yomikata": "いそがしい", "meaning": "바쁘다" },
+      { "kanji": "愛しい", "yomikata": "いとしい", "meaning": "사랑스럽다" },
+      { "kanji": "卑しい", "yomikata": "いやしい", "meaning": "비열하다" },
+      { "kanji": "忌まわしい", "yomikata": "いまわしい", "meaning": "꺼림칙하다" }
+    ],
+    "形容詞_う行": [
+      { "kanji": "疑わしい", "yomikata": "うたがわしい", "meaning": "의심스럽다" },
+      { "kanji": "薄暗い", "yomikata": "うすぐらい", "meaning": "어둑어둑하다" }
+    ],
+    "形容詞_お行": [
+      { "kanji": "重々しい", "yomikata": "おもおもしい", "meaning": "위엄 있다, 장엄하다" },
+      { "kanji": "恐ろしい", "yomikata": "おそろしい", "meaning": "무섭다" },
+      { "kanji": "大人しい", "yomikata": "おとなしい", "meaning": "얌전하다, 온순하다" }
+    ],
+    "形容詞_か行": [
+      { "kanji": "可笑しい", "yomikata": "おかしい", "meaning": "이상하다, 우습다" },
+      { "kanji": "賢い", "yomikata": "かしこい", "meaning": "영리하다" },
+      { "kanji": "堅苦しい", "yomikata": "かたくるしい", "meaning": "딱딱하다, 형식적이다" }
+    ],
+    "形容詞_さ行": [
+      { "kanji": "清い", "yomikata": "きよい", "meaning": "맑다, 깨끗하다" },
+      { "kanji": "鋭い", "yomikata": "するどい", "meaning": "날카롭다" },
+      { "kanji": "酸っぱい", "yomikata": "すっぱい", "meaning": "시다" }
+    ],
+    "形容詞_た行": [
+      { "kanji": "尊い", "yomikata": "とうとい／たっとい", "meaning": "귀중하다" },
+      { "kanji": "乏しい", "yomikata": "とぼしい", "meaning": "부족하다" },
+      { "kanji": "頼もしい", "yomikata": "たのもしい", "meaning": "믿음직하다" }
+    ],
+    "形容詞_な行": [
+      { "kanji": "情け深い", "yomikata": "なさけぶかい", "meaning": "동정심이 깊다" },
+      { "kanji": "憎い", "yomikata": "にくい", "meaning": "밉다" },
+      { "kanji": "憎らしい", "yomikata": "にくらしい", "meaning": "얄밉다" }
+    ],
+    "形容詞_は行": [
+      { "kanji": "華々しい", "yomikata": "はなばなしい", "meaning": "화려하다" },
+      { "kanji": "久しい", "yomikata": "ひさしい", "meaning": "오래되다" },
+      { "kanji": "等しい", "yomikata": "ひとしい", "meaning": "같다" },
+      { "kanji": "平たい", "yomikata": "ひらたい", "meaning": "평평하다" }
+    ],
+    "形容詞_ま行": [
+      { "kanji": "眩しい", "yomikata": "まぶしい", "meaning": "눈부시다" },
+      { "kanji": "真ん丸い", "yomikata": "まんまるい", "meaning": "동그랗다" }
+    ],
+    "形容詞_や行": [
+      { "kanji": "ややこしい", "yomikata": "ややこしい", "meaning": "복잡하다" },
+      { "kanji": "柔らかい", "yomikata": "やわらかい", "meaning": "부드럽다" }
+    ],
+    "形容詞_ら行": [
+      { "kanji": "力強い", "yomikata": "ちからづよい", "meaning": "힘차다" },
+      { "kanji": "緩い", "yomikata": "ゆるい", "meaning": "느슨하다" },
+      { "kanji": "冷たい", "yomikata": "つめたい", "meaning": "차갑다" }
+    ],
+    "形容詞_わ行": [
+      { "kanji": "若々しい", "yomikata": "わかわかしい", "meaning": "젊디젊다" }
+    ],
+    "副詞_あ行": [
+      { "kanji": "あらかじめ", "yomikata": "あらかじめ", "meaning": "미리" },
+      { "kanji": "あくまで", "yomikata": "あくまで", "meaning": "끝까지, 어디까지나" },
+      { "kanji": "あえて", "yomikata": "あえて", "meaning": "굳이, 감히" },
+      { "kanji": "あっさり", "yomikata": "あっさり", "meaning": "담백하게, 산뜻하게" }
+    ],
+    "副詞_い行": [
+      { "kanji": "いかにも", "yomikata": "いかにも", "meaning": "정말로, 매우" },
+      { "kanji": "いずれ", "yomikata": "いずれ", "meaning": "언젠가, 머지않아" }
+    ],
+    "副詞_う行": [
+      { "kanji": "うっかり", "yomikata": "うっかり", "meaning": "깜빡, 무심코" },
+      { "kanji": "うんと", "yomikata": "うんと", "meaning": "훨씬, 듬뿍" }
+    ],
+    "副詞_お行": [
+      { "kanji": "大いに", "yomikata": "おおいに", "meaning": "크게, 매우" },
+      { "kanji": "思い切り", "yomikata": "おもいきり", "meaning": "실컷, 마음껏" }
+    ],
+    "副詞_か行": [
+      { "kanji": "かなり", "yomikata": "かなり", "meaning": "상당히" },
+      { "kanji": "必ずしも", "yomikata": "かならずしも", "meaning": "반드시 (…인 것은 아니다)" }
+    ],
+    "副詞_さ行": [
+      { "kanji": "さすが", "yomikata": "さすが", "meaning": "과연, 역시" },
+      { "kanji": "さっぱり", "yomikata": "さっぱり", "meaning": "상쾌하게, 전혀 (부정과 함께)" }
+    ],
+    "副詞_た行": [
+      { "kanji": "たちまち", "yomikata": "たちまち", "meaning": "곧, 금세" },
+      { "kanji": "たまたま", "yomikata": "たまたま", "meaning": "우연히, 때마침" }
+    ],
+    "副詞_な行": [
+      { "kanji": "何しろ", "yomikata": "なにしろ", "meaning": "아무튼, 어쨌든" },
+      { "kanji": "何となく", "yomikata": "なんとなく", "meaning": "왠지 모르게" }
+    ],
+    "副詞_は行": [
+      { "kanji": "はるかに", "yomikata": "はるかに", "meaning": "훨씬" },
+      { "kanji": "ぴったり", "yomikata": "ぴったり", "meaning": "딱 맞게" }
+    ],
+    "副詞_ま行": [
+      { "kanji": "まさか", "yomikata": "まさか", "meaning": "설마" },
+      { "kanji": "ますます", "yomikata": "ますます", "meaning": "점점 더" }
+    ],
+    "副詞_や行": [
+      { "kanji": "やがて", "yomikata": "やがて", "meaning": "머지않아, 곧" },
+      { "kanji": "やたらに", "yomikata": "やたらに", "meaning": "함부로, 지나치게" }
+    ],
+    "副詞_ら行": [
+      { "kanji": "割合に", "yomikata": "わりあいに", "meaning": "비교적" },
+      { "kanji": "わざと", "yomikata": "わざと", "meaning": "일부러" }
+    ],
+    "副詞_わ行": [
+      { "kanji": "わずかに", "yomikata": "わずかに", "meaning": "불과, 겨우" },
+      { "kanji": "わりと", "yomikata": "わりと", "meaning": "비교적" }
+    ]
+  },
 };
