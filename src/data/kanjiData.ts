@@ -98,7 +98,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "滞る", "yomikata": "とどこおる", "meaning": "정체되다, 막히다, 밀리다" },
       { "kanji": "驚嘆", "yomikata": "きょうたん", "meaning": "경탄" }
     ],
-    "2017": [
+    " 2017": [
       { "kanji": "潤す", "yomikata": "うるおす", "meaning": "축이다, 윤택하게 하다" },
       { "kanji": "殺菌", "yomikata": "さっきん", "meaning": "살균" },
       { "kanji": "託される", "yomikata": "たくされる", "meaning": "맡겨지다" },
@@ -112,7 +112,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "指図", "yomikata": "さしず", "meaning": "지시, 지휘" },
       { "kanji": "巡り", "yomikata": "めぐり", "meaning": "한바퀴 돎, 여기 저기 들름" }
     ],
-    "2016": [
+    " 2016": [
       { "kanji": "樹木", "yomikata": "じゅもく", "meaning": "수목" },
       { "kanji": "蓄える", "yomikata": "たくわえる", "meaning": "대비해 두다, 저장하다" },
       { "kanji": "陳列", "yomikata": "ちんれつ", "meaning": "진열" },
@@ -126,7 +126,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "廃れる", "yomikata": "すたれる", "meaning": "쇠퇴하다, 유행하지 않게 되다" },
       { "kanji": "相場", "yomikata": "そうば", "meaning": "시세" }
     ],
-    "2015": [
+    " 2015": [
       { "kanji": "興奮", "yomikata": "こうふん", "meaning": "흥분" },
       { "kanji": "唱える", "yomikata": "となえる", "meaning": "외치다, 주장하다" },
       { "kanji": "変遷", "yomikata": "へんせん", "meaning": "변천" },
@@ -140,7 +140,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "淡い", "yomikata": "あわい", "meaning": "(맛, 빛깔) 진하지 않다" },
       { "kanji": "画一的", "yomikata": "かくいつてき", "meaning": "획일적" }
     ],
-    "2014": [
+    " 2014": [
       { "kanji": "概略", "yomikata": "がいりゃく", "meaning": "개략, 대략" },
       { "kanji": "臨む", "yomikata": "のぞむ", "meaning": "임하다" },
       { "kanji": "督促", "yomikata": "とくそく", "meaning": "독촉" },
@@ -154,7 +154,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "中枢", "yomikata": "ちゅうすう", "meaning": "중추" },
       { "kanji": "否めない", "yomikata": "いなめない", "meaning": "부정할 수 없다" }
     ],
-    "2013": [
+    " 2013": [
       { "kanji": "把握", "yomikata": "はあく", "meaning": "파악" },
       { "kanji": "憤る", "yomikata": "いきどおる", "meaning": "분노" },
       { "kanji": "趣旨", "yomikata": "しゅし", "meaning": "취지" },
@@ -168,7 +168,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "緩和", "yomikata": "かんわ", "meaning": "완화" },
       { "kanji": "跡地", "yomikata": "あとち", "meaning": "철거부지, 잔해" }
     ],
-    "2012": [
+    " 2012": [
       { "kanji": "枠", "yomikata": "わく", "meaning": "테두리" },
       { "kanji": "網羅", "yomikata": "もうら", "meaning": "망라" },
       { "kanji": "名誉", "yomikata": "めいよ", "meaning": "명예" },
@@ -182,7 +182,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "克明", "yomikata": "こくめい", "meaning": "자세하고 꼼꼼함, 성실하고 정직함" },
       { "kanji": "踏襲する", "yomikata": "とうしゅうする", "meaning": "답습하다, 전철을 밟다" }
     ],
-    "2011": [
+    " 2011": [
       { "kanji": "鈍る", "yomikata": "にぶる", "meaning": "둔해지다" },
       { "kanji": "漠然と", "yomikata": "ばくぜんと", "meaning": "막연히" },
       { "kanji": "閲覧", "yomikata": "えつらん", "meaning": "열람" },
@@ -196,7 +196,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "根拠", "yomikata": "こんきょ", "meaning": "근거" },
       { "kanji": "肝心", "yomikata": "かんじん", "meaning": "중요함" }
     ],
-    "2010": [
+    " 2010": [
       { "kanji": "本筋", "yomikata": "ほんすじ", "meaning": "본론" },
       { "kanji": "伴奏", "yomikata": "ばんそう", "meaning": "반주" },
       { "kanji": "推理", "yomikata": "すいり", "meaning": "추리" },
