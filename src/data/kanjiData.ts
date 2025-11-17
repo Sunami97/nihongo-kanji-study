@@ -1586,7 +1586,7 @@ export const kanjiData: Record<string, Record<string, KanjiWord[]>> = {
       { "kanji": "性能", "yomikata": "せいのう", "meaning": "성능" },
       { "kanji": "製品", "yomikata": "せいひん", "meaning": "제품" },
       { "kanji": "性別", "yomikata": "せいべつ", "meaning": "성별" },
-      { "kanji": "制약", "yomikata": "せいやく", "meaning": "제약" },
+      { "kanji": "制約", "yomikata": "せいやく", "meaning": "제약" },
       { "kanji": "整理券", "yomikata": "せいりけん", "meaning": "정리권, 번호표" },
       { "kanji": "政令", "yomikata": "せいれい", "meaning": "정부령" },
       { "kanji": "整列", "yomikata": "せいれつ", "meaning": "정렬" },
